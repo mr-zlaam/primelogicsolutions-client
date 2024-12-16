@@ -1,0 +1,5 @@
+/src/components/ui/*
+# Ignore the src/components/ui folder and its contents
+/src/components/ui/*
+./src/components/ui/*
+

@@ -5,8 +5,8 @@
   "scripts": {
     "lint": "eslint . --ext .js,.ts,.jsx,.tsx --max-warnings=0",
     "type-check": "tsc --noEmit",
-    "dev": "pnpm type-check && pnpm lint && next dev",
-    "build": "pnpm type-check && pnpm lint && next build",
+    "dev": "pnpm run fmt && pnpm type-check && pnpm lint && next dev",
+    "build": "pnpm run fmt && pnpm  type-check && pnpm lint && next build",
     "fmt": "prettier --write \"**/*.{ts,tsx,js,jsx,md,mdx,css,yaml,yml}\"",
     "fmt:check": "prettier --check \"**/*.{ts,tsx,js,jsx,md,mdx,css,yaml,yml}\"",
     "precommit": "concurrently \"pnpm run lint\" \"pnpm run type-check && pnpm run fmt && git add .\"",
@@ -15,10 +15,15 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@radix-ui/react-slot": "^1.1.1",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "clx": "^1.0.0",
     "concurrently": "^9.1.0",
     "next": "14.2.20",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "tailwind-merge": "^2.5.5"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.6.1",
@@ -35,4 +40,3 @@
     "typescript": "^5"
   }
 }
-
