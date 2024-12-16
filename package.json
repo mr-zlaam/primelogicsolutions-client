@@ -3,24 +3,35 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "lint": "eslint . --ext .js,.ts,.jsx,.tsx",
+    "type-check": "tsc --noEmit",
+    "dev": "pnpm type-check && pnpm lint && next dev",
+    "build": "pnpm type-check && pnpm lint && next build",
+    "fmt": "prettier --write \"**/*.{ts,tsx,js,jsx,md,mdx,css,yaml,yml}\"",
+    "fmt:check": "prettier --check \"**/*.{ts,tsx,js,jsx,md,mdx,css,yaml,yml}\"",
+    "precommit": "concurrently \"pnpm run lint\" \"pnpm run type-check && pnpm run fmt && git add .\"",
     "start": "next start",
-    "lint": "next lint"
+    "commit-lint": "commitlint  --edit",
+    "prepare": "husky"
   },
   "dependencies": {
+    "concurrently": "^9.1.0",
+    "next": "14.2.20",
     "react": "^18",
-    "react-dom": "^18",
-    "next": "14.2.20"
+    "react-dom": "^18"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@commitlint/cli": "^19.6.1",
+    "@commitlint/config-conventional": "^19.6.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
     "eslint": "^8",
-    "eslint-config-next": "14.2.20"
+    "eslint-config-next": "14.2.20",
+    "husky": "^9.1.7",
+    "postcss": "^8",
+    "prettier": "^3.4.2",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
   }
 }
