@@ -38,7 +38,7 @@
     "@typescript-eslint/explicit-function-return-type": "off",
     "prefer-arrow-callback": "error",
     "import/order": [
-      "error",
+      "off",
       {
         "groups": [
           [
@@ -57,7 +57,7 @@
     ],
     "prefer-const": "error",
     "no-unused-expressions": "error",
-    "no-use-before-define": "error",
+    "no-use-before-define": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn"
   }

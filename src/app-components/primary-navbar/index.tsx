@@ -8,7 +8,7 @@ const PrimaryNavBar: React.FC = () => {
     <React.Fragment>
       <header className="w-full h-[100px] bg-[#141323] text-background flex items-center justify-around">
         <div className="welcome-message">
-          <span className="text-lg font-semibold flex items-center">
+          <span className="text-lg  flex items-center">
             <Hand
               className="text-orange-500 mr-2 rotate-45"
               size={24}
@@ -18,8 +18,8 @@ const PrimaryNavBar: React.FC = () => {
         </div>
         <div className="flex items-center">
           <span className="mr-4 text-sm flex items-center">
-            <span className="inline-block border border-primary w-[50px] mx-4" />
-            FOLLOW US
+            <span className="border border-primary w-[40px] mx-4" />
+            <span className="font-semibold">FOLLOW US</span>
           </span>
           <div className="flex space-x-4">
             <Link
