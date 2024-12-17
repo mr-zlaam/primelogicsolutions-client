@@ -13,15 +13,11 @@
       "error",
       "double"
     ],
-    "indent": [
-      "error",
-      2
-    ],
     "semi": [
       "error",
       "always"
     ],
-    "no-unused-vars": "warn",
+    "no-unused-vars": "error",
     "no-console": [
       "error",
       {
@@ -31,6 +27,10 @@
           "info"
         ]
       }
+    ],
+    "@typescript-eslint/consistent-type-definitions": [
+      "error",
+      "interface"
     ],
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/no-explicit-any": "error",

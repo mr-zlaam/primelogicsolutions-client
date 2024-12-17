@@ -79,3 +79,7 @@ body {
     @apply bg-background text-foreground;
   }
 }
+*::selection {
+  background: lightblue;
+  color: black;
+}
