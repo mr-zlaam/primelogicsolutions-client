@@ -6,7 +6,7 @@ import { IoLogoLinkedin } from "react-icons/io";
 const PrimaryNavBar: React.FC = () => {
   return (
     <React.Fragment>
-      <header className="w-full h-[100px] bg-[#141323] text-background flex items-center justify-around">
+      <header className="w-full h-[100px] bg-[#141323] text-background  items-center justify-around lg:flex hidden">
         <div className="welcome-message">
           <span className="text-lg  flex items-center">
             <Hand
