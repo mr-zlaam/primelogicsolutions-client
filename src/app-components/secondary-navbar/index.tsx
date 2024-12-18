@@ -86,6 +86,7 @@ const SecondaryNavbar: React.FC<MultiLevelMenuProps> = ({ items }) => {
       </div>
       <div className=" space-x-5 items-center hidden lg:flex">
         <SideBarCircleButton />
+
         <RequestQuoteButton />
       </div>
     </header>
