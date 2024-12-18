@@ -54,7 +54,6 @@ export const menuData: IMENUITEM[] = [
         id: 7,
         title: "Web Development",
         description: "",
-        href: "#",
         children: [
           {
             id: 8,
@@ -82,7 +81,6 @@ export const menuData: IMENUITEM[] = [
         id: 11,
         title: "Mobile Application Development",
         description: "",
-        href: "#",
         children: [
           {
             id: 12,
