@@ -49,7 +49,7 @@ const DeskTopMenuItem: React.FC<MenuItemProps> = ({ item, depth, activeMenuPath,
       {item.children && (
         <ul
           className={cn(
-            "absolute left-0 bg-white border border-gray-200 shadow-md w-fit z-[999] transition-all duration-300 ease-in-out transform origin-top pointer-events-auto",
+            "absolute left-0 bg-white border border-gray-200 shadow-md w-fit z-[900] transition-all duration-300 ease-in-out transform origin-top pointer-events-auto",
             depth === 0 ? "top-full mt-4" : "top-0 left-full",
             isActive ? "opacity-100 scale-y-100 rounded-md" : "opacity-0 scale-y-0 pointer-events-none"
           )}>

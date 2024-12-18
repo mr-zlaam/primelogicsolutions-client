@@ -121,8 +121,8 @@ export const ModalBody = ({
             }}
             transition={{
               type: "spring",
-              stiffness: 200,
-              damping: 20,
+              stiffness: 800,
+              damping: 40,
             }}
           >
             <CloseIcon />

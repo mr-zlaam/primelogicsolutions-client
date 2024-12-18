@@ -1,5 +1,4 @@
 "use client";
-//TODO: DO THE CODE SPLITING COMPULSORY
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import React, { useState } from "react";
