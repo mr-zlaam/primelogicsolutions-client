@@ -2,7 +2,6 @@
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import React, { useState } from "react";
-import logoImage from "../../../public/assets/images/logo.png";
 import Image from "next/image";
 import type { IMENUITEM } from "./secondaryMenus";
 import SideBarCircleButton from "./navbar-components/sideBarButton";
@@ -37,7 +36,7 @@ const SecondaryNavbar: React.FC<MultiLevelMenuProps> = ({ items }) => {
         href={"/"}
         className="">
         <Image
-          src={logoImage}
+          src={"https://i.postimg.cc/SN1S6nVn/logo.png"}
           alt="logo"
           width={100}
           height={100}
