@@ -24,27 +24,49 @@ const DeskTopMenuItem: React.FC<MenuItemProps> = ({ item, depth, activeMenuPath,
     <li
       className="relative text-base"
       onMouseEnter={handleMouseEnter}>
-      <Link
-        href={item.href}
-        className={cn(
-          "flex rounded-md items-center justify-between  cursor-pointer",
-          depth >= 1 && "hover:bg-primary hover:text-background text-primary px-3 py-2",
-          !item.children && depth === 0 && isCurrentPathActive(item.href!) && "hidden"
-        )}>
-        <span className={cn("font-medium block", depth === 0 && "text-background", depth >= 1 && " whitespace-nowrap pr-2")}>{item.title}</span>
+      {item.href ? (
+        <Link
+          href={item.href}
+          className={cn(
+            "flex rounded-md items-center justify-between cursor-pointer",
+            depth >= 1 && "hover:bg-primary hover:text-background text-primary px-3 py-2",
+            !item.children && depth === 0 && isCurrentPathActive(item.href!) && "hidden"
+          )}>
+          <span className={cn("font-medium block", depth === 0 && "text-background", depth >= 1 && "whitespace-nowrap pr-2")}>{item.title}</span>
 
-        {item.children && (
-          <span
-            className={cn(
-              isActive && depth === 0 && "rotate-180 transition-all duration-300",
-              isActive && depth >= 1 && "-rotate-90 transition-all duration-200",
-              depth === 0 && "text-background"
-            )}>
-            {" "}
-            ▼
-          </span>
-        )}
-      </Link>
+          {item.children && (
+            <span
+              className={cn(
+                isActive && depth === 0 && "rotate-180 transition-all duration-300",
+                isActive && depth >= 1 && "-rotate-90 transition-all duration-200",
+                depth === 0 && "text-background"
+              )}>
+              {" "}
+              ▼
+            </span>
+          )}
+        </Link>
+      ) : (
+        <span
+          className={cn(
+            "flex rounded-md items-center justify-between cursor-pointer",
+            depth >= 1 && "hover:bg-primary hover:text-background text-primary px-3 py-2"
+          )}>
+          <span className={cn("font-medium block", depth === 0 && "text-background", depth >= 1 && "whitespace-nowrap pr-2")}>{item.title}</span>
+
+          {item.children && (
+            <span
+              className={cn(
+                isActive && depth === 0 && "rotate-180 transition-all duration-300",
+                isActive && depth >= 1 && "-rotate-90 transition-all duration-200",
+                depth === 0 && "text-background"
+              )}>
+              {" "}
+              ▼
+            </span>
+          )}
+        </span>
+      )}
 
       {item.children && (
         <ul
@@ -72,4 +94,5 @@ const DeskTopMenuItem: React.FC<MenuItemProps> = ({ item, depth, activeMenuPath,
     </li>
   );
 };
+
 export default DeskTopMenuItem;

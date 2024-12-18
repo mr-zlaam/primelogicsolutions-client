@@ -9,8 +9,6 @@ export const menuData: IMENUITEM[] = [
     id: 10,
     title: "About Us",
     description: "",
-    href: "#",
-
     children: [
       {
         id: 1,
@@ -51,7 +49,6 @@ export const menuData: IMENUITEM[] = [
     id: 6,
     title: "Services",
     description: "",
-    href: "#",
     children: [
       {
         id: 7,
@@ -155,7 +152,6 @@ export const menuData: IMENUITEM[] = [
     id: 22,
     title: "Industries",
     description: "",
-    href: "#",
     children: [
       {
         id: 23,
@@ -232,7 +228,6 @@ export const menuData: IMENUITEM[] = [
   {
     id: 34,
     title: "Technologies",
-    href: "#",
     children: [
       {
         //Web Technology
@@ -319,7 +314,7 @@ export interface IMENUITEM {
   id: number;
   title: string;
   description?: string; // Optional description
-  href: string; // Optional link
+  href?: string; // Optional link
   image?: string; // Optional image URL
   children?: IMENUITEM[]; // Optional nested children
 }
