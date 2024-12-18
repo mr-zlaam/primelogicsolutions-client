@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { IMENUITEM } from "../secondaryMenus";
 import { cn } from "@/lib/utils";
+import { CurrentPath } from "@/helpers/checkActivePath";
 
 interface MenuItemProps {
   item: IMENUITEM;
@@ -12,6 +13,7 @@ interface MenuItemProps {
 }
 
 const DeskTopMenuItem: React.FC<MenuItemProps> = ({ item, depth, activeMenuPath, onToggle }) => {
+  const isCurrentPathActive = CurrentPath();
   const isActive = activeMenuPath[depth] === item.id;
 
   const handleMouseEnter = () => {
@@ -26,7 +28,8 @@ const DeskTopMenuItem: React.FC<MenuItemProps> = ({ item, depth, activeMenuPath,
         href={item.href}
         className={cn(
           "flex rounded-md items-center justify-between  cursor-pointer",
-          depth >= 1 && "hover:bg-primary hover:text-background text-primary px-3 py-2"
+          depth >= 1 && "hover:bg-primary hover:text-background text-primary px-3 py-2",
+          !item.children && depth === 0 && isCurrentPathActive(item.href!) && "hidden"
         )}>
         <span className={cn("font-medium block", depth === 0 && "text-background", depth >= 1 && " whitespace-nowrap pr-2")}>{item.title}</span>
 

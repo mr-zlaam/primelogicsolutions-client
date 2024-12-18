@@ -51,6 +51,25 @@ const config: Config = {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)"
+      },
+      animation: {
+        "x-tofro": "x-tofro 2s ease-in-out infinite",
+        "y-tofro": "y-tofro 2s ease-in-out infinite",
+        heart: "heart 5s ease-in-out infinite" // Adjusted duration to make it smoother
+      },
+      keyframes: {
+        "x-tofro": {
+          "0%, 100%": { transform: "translateX(-5px)" },
+          "50%": { transform: "translateX(5px)" }
+        },
+        "y-tofro": {
+          "0%, 100%": { transform: "translateY(-5px)" },
+          "50%": { transform: "translateY(5px)" }
+        },
+        heart: {
+          "0%, 100%": { transform: "scale(1)" },
+          "50%": { transform: "scale(0.4)" } // Shrinks to 90% of its size
+        }
       }
     }
   },

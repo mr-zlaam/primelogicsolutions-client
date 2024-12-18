@@ -1,5 +1,9 @@
-// import { Abutton } from "@/components/ui/a-button";
+import React from "react";
 
-export default function Home() {
-  return <>{/* <Abutton variant={"animate"}>Hello</Abutton> */}</>;
+export default function HomePage() {
+  return (
+    <React.Fragment>
+      <h1>Hello wolrd</h1>
+    </React.Fragment>
+  );
 }

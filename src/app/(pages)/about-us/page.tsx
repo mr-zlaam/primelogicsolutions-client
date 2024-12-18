@@ -1,11 +1,11 @@
 import {} from "react";
 
-function AboutUs() {
+function AboutUsPage() {
   return (
     <>
-      <section>AboutUs</section>
+      <section>AboutUsPage</section>
     </>
   );
 }
 
-export default AboutUs;
+export default AboutUsPage;

@@ -1,5 +1,11 @@
 export const menuData: IMENUITEM[] = [
   {
+    id: 1,
+    title: "Home",
+    description: "",
+    href: "/"
+  },
+  {
     id: 10,
     title: "About Us",
     description: "",
@@ -286,21 +292,27 @@ export const menuData: IMENUITEM[] = [
   },
   {
     id: 44,
-    title: "Portfolio",
+    title: "Products",
     description: "",
-    href: "#"
+    href: "/products"
   },
   {
     id: 45,
-    title: "Blog",
+    title: "Portfolio",
     description: "",
-    href: "#"
+    href: "/portfolio"
   },
   {
     id: 46,
+    title: "Blog",
+    description: "",
+    href: "/blog"
+  },
+  {
+    id: 47,
     title: "Contact",
     description: "",
-    href: "#"
+    href: "/contact"
   }
 ];
 export interface IMENUITEM {
