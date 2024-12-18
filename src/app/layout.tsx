@@ -4,6 +4,7 @@ import "./globals.css";
 import "@/styles/customStyles.css";
 import NextTopLoader from "nextjs-toploader";
 import Preloader from "@/app-components/preloader/Preloader";
+
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",

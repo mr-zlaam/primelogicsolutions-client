@@ -33,7 +33,7 @@ const SecondaryNavbar: React.FC<MultiLevelMenuProps> = ({ items }) => {
   };
 
   return (
-    <header className="bg-primary lg:max-w-screen-xl mx-auto flex items-center justify-between w-full lg:justify-around h-[100px] shadow-md px-16 rounded-sm ">
+    <header className="bg-primary lg:max-w-screen-xl mx-auto flex items-center justify-between w-full  h-[100px] shadow-md px-16 rounded-sm ">
       <Link
         href={"/"}
         className="">
