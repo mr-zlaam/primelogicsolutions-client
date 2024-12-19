@@ -2,6 +2,8 @@ import React from "react";
 import PageWrapper from "../pagewrapper/pagewrapper";
 
 import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
+import ConsultationButtonComponent from "./ladingPageButtons/consultationButton";
+import HireUsButtoncComponents from "./ladingPageButtons/hireUsButton";
 
 const words = [
   {
@@ -22,11 +24,10 @@ function LandingComponent() {
           <div className="flex flex-col">
             <h1 className="relative top-10  text-7xl font-[900]">
               <span className="text-background">One</span> <span className="text-background">Stop</span>
-              <br />
               <TypewriterEffectSmooth
                 words={words}
                 cursorClassName="hidden"
-                className=""
+                className="relative top-[-20px]"
               />
             </h1>
             <div className="mt-5 flex space-x-10">
@@ -34,6 +35,10 @@ function LandingComponent() {
               <h2 className="max-w-[350px] font-[500] text-lg text-background">
                 Consult wisely: Plans flourish with seamless designs, user-friendly systems, and unified resources.
               </h2>
+            </div>
+            <div className="flex flex-col space-y-4 mt-4 ">
+              <HireUsButtoncComponents />
+              <ConsultationButtonComponent />
             </div>
           </div>
         </PageWrapper>

@@ -77,7 +77,7 @@ const config: Config = {
           "50%": { transform: "translateY(5px)" }
         },
         heart: {
-          "0%, 100%": { transform: "scale(1)" },
+          "0%, 100%": { transform: "scale(0.7)" },
           "50%": { transform: "scale(0.4)" } // Shrinks to 90% of its size
         }
       }
