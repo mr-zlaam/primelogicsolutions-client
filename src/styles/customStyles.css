@@ -3,6 +3,7 @@
     transform: scale(0);
     opacity: 1;
   }
+
   100% {
     transform: scale(2);
     opacity: 1;
@@ -14,22 +15,28 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #f97316; /* Use Tailwind's primary color */
-  border-radius: 9999px; /* Fully rounded */
-  transform: scale(0); /* Start from center */
+  background-color: #f97316;
+  /* Use Tailwind's primary color */
+  border-radius: 9999px;
+  /* Fully rounded */
+  transform: scale(0);
+  /* Start from center */
   opacity: 1;
   transition: transform 0.8s ease-out;
   z-index: 0;
 }
 
 .hover-fill-center:hover::before {
-  transform: scale(2); /* Expand outwards */
+  transform: scale(2);
+  /* Expand outwards */
 }
 
 .hover-fill-center span {
   position: relative;
-  z-index: 10; /* Ensure text stays on top */
+  z-index: 10;
+  /* Ensure text stays on top */
 }
+
 /* Preloadercss   */
 
 /*===========================
@@ -44,7 +51,7 @@
   width: 100%;
   height: 100%;
   transition: 0.8s 1s ease;
-  z-index: 666;
+  z-index: 999;
 }
 
 .loader {
@@ -184,6 +191,95 @@
   top: -100%;
   opacity: 0;
 }
+
 /* a.logo_img img {
   width: 90px !important;
 } */
+
+/*
+    Background Image
+*/
+.landing-bg {
+  background: url("../assets/images/hero-bg.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100vh;
+  padding-top: 10rem;
+  /* Allows for absolute positioning of child elements if needed */
+}
+
+/* Apply global styling to all elements */
+* {
+  scrollbar-width: none;
+  /* Firefox */
+  scrollbar-color: #28282b transparent;
+  /* Thumb and track colors */
+  scroll-behavior: smooth;
+  /* Smooth scrolling */
+  scroll-timeline-name: zlaam;
+}
+
+/* Webkit-based browsers (Chrome, Safari, newer Edge) */
+*::-webkit-scrollbar {
+  width: 8px;
+  /* Width of the scrollbar */
+  height: 8px;
+  /* Height of horizontal scrollbar */
+}
+
+*::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #28282b, #565656);
+  /* Gradient color for thumb */
+  border-radius: 8px;
+  /* Rounded corners */
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #565656;
+  /* Hover effect for thumb */
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+  /* Track background */
+  border-radius: 8px;
+  /* Rounded corners for track */
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  /* Optional shadow */
+}
+
+/* Microsoft Edge and Internet Explorer */
+*::-ms-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-ms-scrollbar-thumb {
+  background-color: #28282b;
+  border-radius: 8px;
+}
+
+/* Media query for responsiveness (small devices) */
+@media screen and (max-width: 768px) {
+  *::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: #3a3a3d;
+  }
+}
+
+/* Prevent image and anchor selection for better UX */
+* > img,
+a {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* Hide Grammarly extension bubble */
+grammarly-extension {
+  display: none !important;
+}

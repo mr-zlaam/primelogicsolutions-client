@@ -32,6 +32,7 @@ export default function RootLayout({
         <Preloader />
 
         <NextTopLoader
+          zIndex={999}
           showSpinner={false}
           color="#F97316"
         />

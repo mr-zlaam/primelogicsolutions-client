@@ -1,9 +1,10 @@
+import LandingComponent from "@/app-components/landingpage";
 import React from "react";
 
 export default function HomePage() {
   return (
     <React.Fragment>
-      <h1>Hello wolrd</h1>
+      <LandingComponent />
     </React.Fragment>
   );
 }

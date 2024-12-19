@@ -10,6 +10,7 @@ import { FaBars } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
 import MobileMenuItem from "./navbar-components/mobileVersion";
 import DeskTopMenuItem from "./navbar-components/desktopVersion";
+import AnimatedImagesComponent from "../landingpage/animatedImage";
 
 export interface MultiLevelMenuProps {
   items: IMENUITEM[];
@@ -31,63 +32,69 @@ const SecondaryNavbar: React.FC<MultiLevelMenuProps> = ({ items }) => {
   };
 
   return (
-    <header className="bg-primary lg:max-w-screen-xl mx-auto flex items-center justify-between w-full  h-[100px] shadow-md px-16 rounded-sm ">
-      <Link
-        href={"/"}
-        className="">
-        <Image
-          src={"https://i.postimg.cc/SN1S6nVn/logo.png"}
-          alt="logo"
-          width={100}
-          height={100}
-        />
-      </Link>
-      <ul
-        className="hidden lg:flex  rounded-md space-x-3 relative"
-        onMouseLeave={handleMouseLeave}>
-        {items.map((item) => (
-          <DeskTopMenuItem
-            key={item.id}
-            item={item}
-            depth={0}
-            activeMenuPath={activeMenuPath}
-            onToggle={handleMenuToggle}
-          />
-        ))}
-      </ul>
-      {!mobileMenuOpen && (
-        <span className="lg:hidden text-4xl">
-          <FaBars
-            size={30}
-            onClick={() => setMobileMenuOpen(true)}
-          />
-        </span>
-      )}
-      <div
-        className={cn(
-          "absolute top-0 left-0 w-full h-screen bg-white transform transition-all duration-300 ease-in-out ",
-          mobileMenuOpen ? "-translate-y-100" : "-translate-y-full hidden"
-        )}>
-        <ul className="flex lg:hidden space-x-3 flex-col">
-          <button
-            className="p-5 w-full flex justify-end "
-            onClick={() => setMobileMenuOpen(false)}>
-            <IoClose size={30} />
-          </button>
-          {items.map((item) => (
-            <MobileMenuItem
-              key={item.id}
-              item={item}
+    <section className="relative">
+      <header className="absolute w-full z-[900]">
+        <div className="bg-primary lg:max-w-screen-xl mx-auto flex items-center justify-between w-full  h-[100px] shadow-md px-16 rounded-sm">
+          <Link
+            href={"/"}
+            className="">
+            <Image
+              src={"https://i.postimg.cc/SN1S6nVn/logo.png"}
+              alt="logo"
+              width={100}
+              height={100}
             />
-          ))}
-        </ul>
-      </div>
-      <div className=" space-x-5 items-center hidden lg:flex">
-        <SideBarCircleButton />
+          </Link>
+          <ul
+            className="hidden lg:flex  rounded-md space-x-3 relative"
+            onMouseLeave={handleMouseLeave}>
+            {items.map((item) => (
+              <DeskTopMenuItem
+                key={item.id}
+                item={item}
+                depth={0}
+                activeMenuPath={activeMenuPath}
+                onToggle={handleMenuToggle}
+              />
+            ))}
+          </ul>
+          {!mobileMenuOpen && (
+            <span className="lg:hidden text-4xl">
+              <FaBars
+                size={30}
+                onClick={() => setMobileMenuOpen(true)}
+              />
+            </span>
+          )}
+          <div
+            className={cn(
+              "absolute top-0 left-0 w-full h-screen bg-white transform transition-all duration-300 ease-in-out ",
+              mobileMenuOpen ? "-translate-y-100" : "-translate-y-full hidden"
+            )}>
+            <ul className="flex lg:hidden space-x-3 flex-col">
+              <button
+                className="p-5 w-full flex justify-end "
+                onClick={() => setMobileMenuOpen(false)}>
+                <IoClose size={30} />
+              </button>
+              {items.map((item) => (
+                <MobileMenuItem
+                  key={item.id}
+                  item={item}
+                />
+              ))}
+            </ul>
+          </div>
+          <div className=" space-x-5 items-center hidden lg:flex">
+            <SideBarCircleButton />
 
-        <RequestQuoteButton />
-      </div>
-    </header>
+            <RequestQuoteButton />
+          </div>
+        </div>
+        <div></div>
+        <AnimatedImagesComponent />
+      </header>
+    </section>
   );
 };
 export default SecondaryNavbar;
