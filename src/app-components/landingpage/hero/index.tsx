@@ -1,5 +1,5 @@
 import React from "react";
-import PageWrapper from "../pagewrapper/pagewrapper";
+import PageWrapper from "../../pagewrapper/pagewrapper";
 
 import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
 import ConsultationButtonComponent from "./ladingPageButtons/consultationButton";

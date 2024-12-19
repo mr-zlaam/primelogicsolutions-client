@@ -10,7 +10,7 @@ import { FaBars } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
 import MobileMenuItem from "./navbar-components/mobileVersion";
 import DeskTopMenuItem from "./navbar-components/desktopVersion";
-import AnimatedImagesComponent from "../landingpage/animatedImage";
+import AnimatedImagesComponent from "../landingpage/hero/animatedImage";
 
 export interface MultiLevelMenuProps {
   items: IMENUITEM[];
