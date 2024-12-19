@@ -91,7 +91,6 @@ const SecondaryNavbar: React.FC<MultiLevelMenuProps> = ({ items }) => {
             <RequestQuoteButton />
           </div>
         </div>
-        <div></div>
         <AnimatedImagesComponent />
       </header>
     </section>

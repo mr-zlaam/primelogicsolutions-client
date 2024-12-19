@@ -1,8 +1,6 @@
 "use client";
-import React from "react";
 import { Modal, ModalBody, ModalContent, ModalFooter, ModalTrigger } from "@/components/ui/animated-modal";
 
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import Image from "next/image";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
@@ -89,6 +87,29 @@ export default function RequestQuoteButton() {
                     placeholder="Enter your address"
                     className="w-full"
                   />
+
+                  <div className="relative">
+                    <Label htmlFor="Details">Services</Label>
+                    <select className="w-full bg-transparent text-sm border rounded pl-3 pr-8 py-2 transition duration-300 ease focus:outline-none focus:border-primary shadow-sm focus:shadow-md appearance-none cursor-pointer">
+                      <option value="web-development">Web Development</option>
+                      <option value="app-development">App Development</option>
+                      <option value="digital-marketing">Digital Marketing</option>
+                      <option value="graphic-design">Graphic Design</option>
+                    </select>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.2"
+                      stroke="currentColor"
+                      className="h-5 w-5 ml-1 absolute top-8 right-2.5 text-slate-700">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M8.25 15 12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9"
+                      />
+                    </svg>
+                  </div>
                 </div>
                 <div className="grid w-full gap-1.5">
                   <Label htmlFor="details">Details</Label>
@@ -98,25 +119,15 @@ export default function RequestQuoteButton() {
                     id="details"
                   />
                 </div>
-                <div>
-                  <Label htmlFor="Details">Services</Label>
-
-                  <Select>
-                    <SelectTrigger className="w-full">
-                      <SelectValue placeholder="Select" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="web">Web Development</SelectItem>
-                      <SelectItem value="mobile">Mobile Development</SelectItem>
-                      <SelectItem value="cloud">Cloud Engineering</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
               </form>
             </div>
           </ModalContent>
           <ModalFooter className="flex justify-end gap-4 mt-4">
-            <Button onClick={handleQuoteSubmit}>Submit</Button>
+            <Button
+              variant={"rounded"}
+              onClick={handleQuoteSubmit}>
+              Submit
+            </Button>
           </ModalFooter>
         </ModalBody>
       </Modal>

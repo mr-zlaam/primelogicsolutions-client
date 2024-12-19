@@ -17,17 +17,25 @@ function LandingComponent() {
   return (
     <React.Fragment>
       <div className="landing-bg  ">
-        <PageWrapper className="flex items-center ">
+        <PageWrapper className="flex ">
           <div className="h-[60px] animate-heart w-[60px] relative top-20 left-[-7rem] rounded-full bg-primary" />
-          <h1 className="relative top-20  text-7xl font-[900]">
-            <span className="text-background">One</span> <span className="text-background">Stop</span>
-            <br />
-            <TypewriterEffectSmooth
-              words={words}
-              cursorClassName="hidden"
-              className=""
-            />
-          </h1>
+          <div className="flex flex-col">
+            <h1 className="relative top-10  text-7xl font-[900]">
+              <span className="text-background">One</span> <span className="text-background">Stop</span>
+              <br />
+              <TypewriterEffectSmooth
+                words={words}
+                cursorClassName="hidden"
+                className=""
+              />
+            </h1>
+            <div className="mt-5 flex space-x-10">
+              <div className="h-20 bg-primary w-[5px]  " />
+              <h2 className="max-w-[350px] font-[500] text-lg text-background">
+                Consult wisely: Plans flourish with seamless designs, user-friendly systems, and unified resources.
+              </h2>
+            </div>
+          </div>
         </PageWrapper>
       </div>
     </React.Fragment>
