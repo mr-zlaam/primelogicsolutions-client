@@ -1,7 +1,5 @@
 "use client";
 import React from "react";
-import whitedotpng from "@/assets/images/white-dot.png";
-import shape2 from "@/assets/images/shape2.png";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 function AnimatedImagesComponent() {
@@ -11,7 +9,7 @@ function AnimatedImagesComponent() {
     <React.Fragment>
       <div className="w-fit mx-auto relative top-2 animate-y-tofro">
         <Image
-          src={whitedotpng}
+          src={"https://i.postimg.cc/Cx0QNYP8/white-dot.png"}
           width={130}
           height={130}
           alt="whitedotpng"
@@ -19,7 +17,7 @@ function AnimatedImagesComponent() {
       </div>
       <div className="absolute z-[-1] top-0 left-[-20px] animate-x-tofro">
         <Image
-          src={shape2}
+          src={"https://i.postimg.cc/x1PFp7h4/shape2.png"}
           width={400}
           height={400}
           alt="whitedotpng"
