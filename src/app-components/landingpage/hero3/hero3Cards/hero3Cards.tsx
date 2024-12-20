@@ -3,7 +3,7 @@ import { TfiLayoutLineSolid } from "react-icons/tfi";
 
 import React from "react";
 import { FaPlus } from "react-icons/fa"; // Plus icon from react-icons
-import { FaCode, FaServer, FaShieldAlt, FaUsers } from "react-icons/fa";
+import { FaCode, FaServer, FaShieldAlt, FaTasks, FaUsers } from "react-icons/fa";
 
 const services = [
   {
@@ -29,7 +29,7 @@ const services = [
   {
     title: "Project Management",
     description: "Dramatically cultivate quality user-centric growth strategies to enable emerging technologies.",
-    icon: <FaServer className="text-3xl " />
+    icon: <FaTasks className="text-3xl " />
   },
   {
     title: "Business Development",
@@ -66,6 +66,9 @@ const Hero3Cards = () => {
           </div>
         ))}
       </div>
+      <p className="text-center text-2xl font-bold mt-20 text-background">
+        Consulting and Finance Services Built Specially and Business Find Solutions
+      </p>
     </PageWrapper>
   );
 };
