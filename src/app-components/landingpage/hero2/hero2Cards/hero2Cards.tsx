@@ -5,7 +5,7 @@ import { MdDataExploration } from "react-icons/md";
 import { GiArtificialIntelligence } from "react-icons/gi";
 function Hero2Cards() {
   return (
-    <PageWrapper>
+    <PageWrapper className="py-10 ">
       <div className="grid grid-cols-3 m-3">
         {cardData.map((card) => (
           <div
