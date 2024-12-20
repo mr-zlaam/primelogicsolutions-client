@@ -200,7 +200,7 @@
     Background Image
 */
 .landing-bg {
-  background: url("https://i.postimg.cc/g0TsfPDN/hero-bg.jpg") no-repeat center center;
+  background: url("https://i.postimg.cc/g0TsfPDN/hero-bg.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -282,4 +282,17 @@ a {
 /* Hide Grammarly extension bubble */
 grammarly-extension {
   display: none !important;
+}
+
+/* Section 3 */
+
+.hero3-bg {
+  position: relative;
+  background: url("https://i.postimg.cc/9fw4sMLX/services-bg-f6117197.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  background-color: #000025ef;
 }

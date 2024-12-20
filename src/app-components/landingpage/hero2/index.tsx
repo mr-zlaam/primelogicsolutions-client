@@ -4,10 +4,10 @@ import Hero2About from "./hero2About/hero2About";
 
 function Hero2Component() {
   return (
-    <>
+    <div className="mb-16">
       <Hero2Cards />
       <Hero2About />
-    </>
+    </div>
   );
 }
 
