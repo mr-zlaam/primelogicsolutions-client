@@ -39,7 +39,8 @@ const StaticLoaders: React.FC = () => {
           fontSize="16"
           fontWeight="bold"
           fill={color}>
-          {percentage}%
+          {percentage}
+          {percentage >= 90 ? "%" : ""}
         </text>
       </svg>
     );
@@ -49,7 +50,7 @@ const StaticLoaders: React.FC = () => {
     <div style={{ display: "flex", justifyContent: "center", gap: "20px" }}>
       {/* First Loader */}
       <div style={{ textAlign: "center", margin: "20px" }}>
-        {createCircle(85, "red")}
+        {createCircle(95, "red")}
         <h4 style={{ margin: "10px 0", fontSize: "16px" }}>Clients Satisfactions</h4>
       </div>
 
