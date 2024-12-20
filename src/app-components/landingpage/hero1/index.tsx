@@ -15,7 +15,7 @@ const words = [
     className: " text-7xl font-[900] text-primary"
   }
 ];
-function LandingComponent() {
+function Hero1Component() {
   return (
     <React.Fragment>
       <div className="landing-bg  ">
@@ -47,4 +47,4 @@ function LandingComponent() {
   );
 }
 
-export default LandingComponent;
+export default Hero1Component;
