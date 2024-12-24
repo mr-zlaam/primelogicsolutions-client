@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { IMENUITEM } from "../secondaryMenus";
 import { cn } from "@/lib/utils";
 import { CurrentPath } from "@/helpers/checkActivePath";
+import { ArrowDown } from "lucide-react";
 
 interface MenuItemProps {
   item: IMENUITEM;
@@ -42,7 +43,7 @@ const DeskTopMenuItem: React.FC<MenuItemProps> = ({ item, depth, activeMenuPath,
                 depth === 0 && "text-background"
               )}>
               {" "}
-              ▼
+              <ArrowDown size={15} />
             </span>
           )}
         </Link>
@@ -62,7 +63,7 @@ const DeskTopMenuItem: React.FC<MenuItemProps> = ({ item, depth, activeMenuPath,
                 depth === 0 && "text-background"
               )}>
               {" "}
-              ▼
+              {depth === 0 ? "▼" : depth >= 1 && <ArrowDown size={15} />}
             </span>
           )}
         </span>

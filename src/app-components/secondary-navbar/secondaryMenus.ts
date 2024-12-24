@@ -201,7 +201,6 @@ export const menuData: IMENUITEM[] = [
         id: 15,
         title: "Cloud and DevOps",
         description: "",
-        href: "#",
         children: [
           {
             id: 151,
