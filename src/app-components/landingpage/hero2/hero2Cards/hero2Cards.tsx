@@ -6,11 +6,11 @@ import { GiArtificialIntelligence } from "react-icons/gi";
 function Hero2Cards() {
   return (
     <PageWrapper className="py-10 ">
-      <div className="grid grid-cols-3 m-3">
+      <div className="flex justify-around items-center flex-wrap">
         {cardData.map((card) => (
           <div
             key={card.cardTitle}
-            className="flex flex-col   h-[280px] relative overflow-hidden rounded-md p-5 max-w-[300px] border border-foreground/20 shadow-md hover:shadow-black/50 duration-300 transition-shadow">
+            className="flex flex-col h-[280px] relative overflow-hidden rounded-md p-5 max-w-[300px] border border-foreground/20 shadow-md hover:shadow-black/50 duration-300 transition-shadow">
             <h1 className="w-16 h-16 bg-background/80 rounded-full flex items-center justify-center">{card.cardIcon}</h1>
             <h3 className="text-xl font-bold mt-4">{card.cardTitle}</h3>
             <p className="text-gray-600 mt-2">{card.cardDescription}</p>
