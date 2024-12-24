@@ -46,7 +46,7 @@ const Hero3Cards = () => {
           <div
             key={index}
             className="relative group rounded-lg animate-y-tofro shadow-md p-6 text-center bg-background border border-gray-200 overflow-hidden transition-transform hover:scale-105 max-w-[300px] hover:text-background">
-            <div className="absolute -inset-60 bg-gradient-to-t from-primary via-primary to-transparent scale-y-0 group-hover:scale-y-100 origin-bottom transition-transform duration-500"></div>
+            <div className="absolute -inset-60 bg-gradient-to-t from-primary via-primary  scale-y-0 group-hover:scale-y-100 origin-bottom transition-transform duration-1000" />
 
             <div className="relative z-10 flex justify-center items-center mb-4">{service.icon}</div>
 
@@ -58,7 +58,7 @@ const Hero3Cards = () => {
             <p className="relative z-10 text-sm leading-6 ">{service.description}</p>
 
             <div className="relative z-10 mt-4">
-              <button className="flex items-center justify-center gap-2 py-2 px-4 rounded bg-gray-100 text-foreground group-hover:bg-black group-hover:text-background transition-all duration-300">
+              <button className="flex items-center justify-center gap-2 py-2 px-4 rounded bg-gray-100 text-foreground group-hover:bg-black group-hover:text-background transition-all duration-500">
                 Read More
                 <FaPlus />
               </button>

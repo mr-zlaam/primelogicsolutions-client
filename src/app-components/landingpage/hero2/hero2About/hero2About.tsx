@@ -9,6 +9,7 @@ function Hero2About() {
     <>
       <div className="relative flex top-[100px]  justify-evenly">
         <div className="h-[100px] w-[100px] bg-primary/90 rounded-md absolute top-0 animate-y-tofro left-[45%]" />
+        <div className="h-[2px] w-[50px] bg-primary/90 rounded-md absolute top-0  left-[50%]" />
         <div className="image">
           <Image
             src={"https://i.postimg.cc/1trS2rS0/image.png"}
