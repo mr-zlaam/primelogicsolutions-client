@@ -1,8 +1,9 @@
 import { Hand } from "lucide-react";
+import { FaLinkedinIn } from "react-icons/fa";
 import Link from "next/link";
 import React from "react";
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
-import { IoLogoLinkedin } from "react-icons/io";
+const className = "hover:bg-background hover:text-primary  duration-300 w-[35px] h-[35px] flex items-center justify-center rounded-full";
 const PrimaryNavBar: React.FC = () => {
   return (
     <React.Fragment>
@@ -24,37 +25,35 @@ const PrimaryNavBar: React.FC = () => {
           <div className="flex space-x-4">
             <Link
               href="https://www.facebook.com"
+              className={className}
               target="_blank"
               rel="noopener noreferrer">
-              <FaFacebook
-                className="text-white"
-                size={24}
-              />
+              <FaFacebook size={24} />
             </Link>
             <Link
               href="https://www.linkedin.com"
+              className={className}
               target="_blank"
               rel="noopener noreferrer">
-              <IoLogoLinkedin
-                className="text-white"
-                size={24}
-              />
+              <FaLinkedinIn size={24} />
             </Link>
             <Link
               href="https://twitter.com"
+              className={className}
               target="_blank"
               rel="noopener noreferrer">
               <FaTwitter
-                className="text-white"
+                className={""}
                 size={24}
               />
             </Link>
             <Link
               href="https://www.instagram.com"
+              className={className}
               target="_blank"
               rel="noopener noreferrer">
               <FaInstagram
-                className="text-white"
+                className={""}
                 size={24}
               />
             </Link>
