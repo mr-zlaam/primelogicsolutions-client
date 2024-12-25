@@ -7,7 +7,7 @@ import { Abutton } from "@/components/ui/a-button";
 function Hero2About() {
   return (
     <>
-      <div className="relative flex top-[100px]  justify-evenly">
+      <div className="relative flex top-[100px]  lg:justify-evenly flex-col lg:flex-row items-center">
         <div className="h-[100px] w-[100px] bg-primary/90 rounded-md absolute top-0 animate-y-tofro left-[45%]" />
         <div className="h-[2px] w-[50px] bg-primary/90 rounded-md absolute top-0  left-[50%]" />
         <div className="image">
@@ -20,7 +20,7 @@ function Hero2About() {
         </div>
         <div className="data flex flex-col items-center max-w-[500px]">
           <h1 className="text-primary font-bold text-lg ">About Prime Logic Solutions</h1>
-          <h1 className="text-4xl font-bold text-center">
+          <h1 className="sm:text-4xl text-2xl   font-bold text-center">
             We are Award Winning AI powered Software Company Over 2000+
             <span className="text-primary">Clients</span>
           </h1>
@@ -45,14 +45,14 @@ function Hero2About() {
             </span>
           </p>
           <StaticLoaders />
+          <div className="w-fit mx-auto mb-12">
+            <Abutton
+              className="rounded h-12 font-semibold  border-2"
+              variant={"animate"}>
+              &#9881; More About Us
+            </Abutton>
+          </div>
         </div>
-      </div>
-      <div className="w-fit mx-auto">
-        <Abutton
-          className="rounded h-12 font-semibold  border-2"
-          variant={"animate"}>
-          &#9881; More About Us
-        </Abutton>
       </div>
     </>
   );

@@ -44,7 +44,7 @@ const Hero3Cards = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4 sm:px-8 lg:px-16 pt-10 cursor-default">
         {services.map((service, index) => (
           <React.Fragment key={index}>
-            <div className="relative group rounded-xl animate-y-tofro shadow-md p-6 text-center bg-background border border-gray-200 overflow-hidden transition-transform hover:scale-105 max-w-[450px] hover:text-background">
+            <div className="relative group rounded-xl animate-y-tofro shadow-md p-6 text-center bg-background border border-gray-200 overflow-hidden transition-transform hover:scale-105 max-w-[450px] hover:text-background mx-auto">
               <div className="relative z-10 flex justify-center items-center mb-4 group-hover:text-background">{service.icon}</div>
               {/* Title */}
               <h3 className="text-[#262626] text-xl font-bold leading-normal mb-2 transition-all duration-500 ease-out group-hover:text-white">

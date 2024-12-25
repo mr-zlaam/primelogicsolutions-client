@@ -47,17 +47,17 @@ const StaticLoaders: React.FC = () => {
   };
 
   return (
-    <div style={{ display: "flex", justifyContent: "center", gap: "20px" }}>
+    <div className="flex flex-col sm:flex-row justify-center sm:space-x-3 space-y-2">
       {/* First Loader */}
-      <div style={{ textAlign: "center", margin: "20px" }}>
+      <div className="text-center m-5">
         {createCircle(95, "red")}
-        <h4 style={{ margin: "10px 0", fontSize: "16px" }}>Clients Satisfactions</h4>
+        <h4 className="my-2 text-base">Clients Satisfactions</h4>
       </div>
 
       {/* Second Loader */}
-      <div style={{ textAlign: "center", margin: "20px" }}>
+      <div className="text-center m-5">
         {createCircle(22, "red")}
-        <h4 style={{ margin: "10px 0", fontSize: "16px" }}>Softwares we are managing</h4>
+        <h4 className="my-2 text-base">Softwares we are managing</h4>
       </div>
     </div>
   );

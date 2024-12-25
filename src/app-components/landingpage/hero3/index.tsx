@@ -14,8 +14,8 @@ function Hero3Component() {
         <div className="absolute bottom-[-4rem] left-[2rem] animate-y-tofro">
           <Image
             src={"https://i.postimg.cc/RCp3Ry1L/image.png"}
-            height={150}
-            width={150}
+            height={120}
+            width={120}
             alt="Arrow"
           />
         </div>
