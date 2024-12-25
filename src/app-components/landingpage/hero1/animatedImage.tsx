@@ -7,7 +7,7 @@ function AnimatedImagesComponent() {
   if (path !== "/") return null;
   return (
     <React.Fragment>
-      <div className="w-fit mx-auto relative top-2 animate-y-tofro">
+      <div className="w-fit mx-auto relative z-[-1] top-2 animate-y-tofro">
         <Image
           src={"https://i.postimg.cc/Cx0QNYP8/white-dot.png"}
           width={130}

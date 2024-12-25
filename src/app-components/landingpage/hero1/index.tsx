@@ -8,11 +8,11 @@ import HireUsButtoncComponents from "./ladingPageButtons/hireUsButton";
 const words = [
   {
     text: "Online",
-    className: " text-7xl font-[900] text-background"
+    className: "text-3xl sm:text-7xl font-[900] text-background"
   },
   {
     text: "Solution!",
-    className: " text-7xl font-[900] text-primary"
+    className: "text-3xl sm:text-7xl font-[900] text-primary"
   }
 ];
 function Hero1Component() {
@@ -22,7 +22,7 @@ function Hero1Component() {
         <PageWrapper className="flex ">
           <div className="h-[60px] animate-heart w-[60px] relative top-20 left-[-7rem] rounded-full bg-primary" />
           <div className="flex flex-col">
-            <h1 className="relative top-10  text-7xl font-[900]">
+            <h1 className="relative top-10 text-3xl  sm:text-7xl font-[900]">
               <span className="text-background">One</span> <span className="text-background">Stop</span>
               <TypewriterEffectSmooth
                 words={words}

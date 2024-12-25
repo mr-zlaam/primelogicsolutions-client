@@ -1,7 +1,7 @@
 "use client";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import type { IMENUITEM } from "./secondaryMenus";
 import SideBarCircleButton from "./navbar-components/sideBarButton";
@@ -31,6 +31,17 @@ const SecondaryNavbar: React.FC<MultiLevelMenuProps> = ({ items }) => {
     setActiveMenuPath([]);
   };
 
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
+
+    return () => {
+      document.body.classList.remove("no-scroll");
+    };
+  }, [mobileMenuOpen]);
   return (
     <section className="relative">
       <header className="absolute w-full z-[900]">
@@ -63,17 +74,19 @@ const SecondaryNavbar: React.FC<MultiLevelMenuProps> = ({ items }) => {
               <FaBars
                 size={30}
                 onClick={() => setMobileMenuOpen(true)}
+                className="text-background"
               />
             </span>
           )}
+
           <div
             className={cn(
-              "absolute top-0 left-0 w-full h-screen bg-white transform transition-all duration-300 ease-in-out ",
-              mobileMenuOpen ? "-translate-y-100" : "-translate-y-full hidden"
+              "absolute top-0 left-0 w-full h-screen bg-white transform transition-all duration-300 ease-in-out lg:hidden",
+              mobileMenuOpen ? "translate-y-0" : "-translate-y-full"
             )}>
-            <ul className="flex lg:hidden space-x-3 flex-col">
+            <ul className="flex lg:hidden flex-col space-y-3 overflow-y-auto h-full">
               <button
-                className="p-5 w-full flex justify-end "
+                className="p-5 w-full flex justify-end"
                 onClick={() => setMobileMenuOpen(false)}>
                 <IoClose size={30} />
               </button>
@@ -81,6 +94,9 @@ const SecondaryNavbar: React.FC<MultiLevelMenuProps> = ({ items }) => {
                 <MobileMenuItem
                   key={item.id}
                   item={item}
+                  depth={0}
+                  mobileMenuOpen={mobileMenuOpen}
+                  setMobileMenuOpen={setMobileMenuOpen}
                 />
               ))}
             </ul>

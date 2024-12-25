@@ -300,7 +300,38 @@ grammarly-extension {
 /*
 -----------------------
 -----------------------
-Landing page card 
+prevent scrolling 
 -----------------------
 -----------------------
 */
+
+.no-scroll {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+/* Menu container allows scrolling */
+.menu-container {
+  position: fixed;
+  /* Prevents it from affecting body scroll */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  /* Ensure it's above other elements */
+  background-color: white;
+  /* Adjust based on your design */
+}
+
+/* Enable scrolling inside the menu */
+.menu-list {
+  overflow-y: auto;
+  /* Allow scrolling for the entire menu */
+  max-height: 100%;
+  /* Prevent growing beyond the viewport */
+  padding: 16px;
+  /* Adjust padding as needed */
+}
