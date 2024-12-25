@@ -27,7 +27,7 @@ export const HoverEffect = ({
       {items.map((item, idx) => (
         <span
 
-          key={item?.link}
+          key={idx}
           className="relative group  block p-2  pointer-events-auto"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}

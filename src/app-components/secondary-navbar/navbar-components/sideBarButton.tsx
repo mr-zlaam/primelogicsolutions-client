@@ -21,19 +21,20 @@ function SideBarCircleButton() {
         className={cn(
           "fixed top-0 right-0 w-full h-screen bg-primary/80 z-[900] transition-transform duration-1000",
           sideBarOpen ? "translate-x-0" : "translate-x-full"
-        )}></div>
+        )}
+      />
 
       <div
         className={cn(
-          "fixed top-0 right-0 w-[400px] h-screen bg-[#28282b] z-[901] transition-transform delay-500 duration-500 flex justify-center",
+          "fixed top-0 right-0 max-w-[400px] px-5 h-screen bg-[#28282b]  z-[901] transition-transform delay-500 duration-500 flex justify-center",
           sideBarOpen ? "translate-x-0" : "translate-x-full"
         )}>
         <div className="p-4 text-white">
           <div className=" flex items-center justify-center">
             <Image
               src="https://i.postimg.cc/SN1S6nVn/logo.png"
-              width={300}
-              height={300}
+              width={200}
+              height={200}
               alt="Logo"
             />
           </div>
@@ -46,23 +47,23 @@ function SideBarCircleButton() {
           <div className="my-3 flex w-full items-center  space-x-5">
             <SlCallIn
               className="text-primary"
-              size={25}
+              size={23}
             />
-            <p className="ml-2">+234 903 123 4567</p>
+            <span className="">+234 903 123 4567</span>
           </div>
           <div className="my-3 flex w-full items-center  space-x-5">
             <HiOutlineMail
               className="text-primary"
               size={25}
             />
-            <p className="ml-2">contact@primelogicsol.com</p>
+            <span className="">contact@primelogicsol.com</span>
           </div>
-          <div className="my-3 flex w-full items-center  space-x-5">
+          <div className="my-3 space-x-5">
             <MdOutlineAccessTime
-              className="text-primary"
+              className="text-primary inline"
               size={25}
             />
-            <p className="ml-2">Week Days: 10.00 AM to 4.00 PM Sunday: Closed</p>
+            <span className="leading-[1.8]">Week Days: 10.00 AM to 4.00 PM, Sunday: Closed</span>
           </div>
         </div>
       </div>
