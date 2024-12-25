@@ -5,7 +5,7 @@ import SectionRight from "./section-right/section-right";
 function Hero4Component() {
   return (
     <React.Fragment>
-      <div className="flex justify-around items-center flex-col md:flex-row my-20">
+      <div className="flex justify-evenly items-center flex-col xl:flex-row my-20 px-4">
         <SectionLeft />
         <SectionRight />
       </div>
