@@ -50,7 +50,7 @@ function Hero2About() {
             <Abutton
               className="rounded h-12 font-semibold  border-2"
               variant={"animate"}>
-              &#9881; More About Us
+              &#9881; More About
             </Abutton>
           </div>
         </div>

@@ -64,7 +64,7 @@ const Hero3Cards = () => {
               <div className="relative z-10 mt-4">
                 <button
                   type="submit"
-                  className="flex justify-center gap-2 items-center mx-auto shadow-xl text-base bg-gray-200 backdrop-blur-md  isolation-auto before:absolute before:top-1/2 before:left-1/2 before:w-0 before:h-0 before:transform before:-translate-x-1/2 before:-translate-y-1/2 before:transition-all before:duration-700 before:rounded-full before:bg-[#10102E] group-hover:filter group-hover:invert transition-all duration-700 before:-z-10 before:group-hover:w-full before:group-hover:h-full before:group-hover:scale-150 before:group-hover:duration-700 relative px-4 py-2 overflow-hidden  rounded-md group"
+                  className="flex justify-center gap-2 items-center mx-auto shadow-xl text-base bg-gray-200   isolation-auto before:absolute before:top-1/2 before:left-1/2 before:w-0 before:h-0 before:transform before:-translate-x-1/2 before:-translate-y-1/2 before:transition-all before:duration-700 before:rounded-full before:bg-[#10102E] group-hover:filter group-hover:invert transition-all duration-700 before:-z-10 before:group-hover:w-full before:group-hover:h-full before:group-hover:scale-150 before:group-hover:duration-700 relative px-4 py-2 overflow-hidden  rounded-md group"
                   style={{
                     filter: "invert(0)"
                   }}>

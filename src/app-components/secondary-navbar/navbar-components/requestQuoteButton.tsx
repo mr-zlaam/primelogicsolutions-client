@@ -25,6 +25,7 @@ export default function RequestQuoteButton() {
                 src="https://i.postimg.cc/J0LhySrM/request-quote-modal.jpg"
                 alt="Placeholder Image"
                 width={600}
+                loading="lazy"
                 height={750}
                 className="rounded-lg object-cover w-full h-full"
               />
