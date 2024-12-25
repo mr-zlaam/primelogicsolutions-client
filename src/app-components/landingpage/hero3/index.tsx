@@ -17,6 +17,7 @@ function Hero3Component() {
             height={120}
             width={120}
             alt="Arrow"
+            loading="lazy"
           />
         </div>
       </section>

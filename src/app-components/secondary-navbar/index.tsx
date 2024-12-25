@@ -54,6 +54,7 @@ const SecondaryNavbar: React.FC<MultiLevelMenuProps> = ({ items }) => {
               alt="logo"
               width={100}
               height={100}
+              loading="lazy"
             />
           </Link>
           <ul

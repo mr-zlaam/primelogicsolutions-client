@@ -13,6 +13,7 @@ function AnimatedImagesComponent() {
           width={130}
           height={130}
           alt="whitedotpng"
+          loading="lazy"
         />
       </div>
       <div className="absolute z-[-1] top-0 left-[-20px] animate-x-tofro">
@@ -22,6 +23,7 @@ function AnimatedImagesComponent() {
           height={400}
           alt="whitedotpng"
           className="opacity-40 select-none"
+          loading="lazy"
         />
       </div>
     </React.Fragment>

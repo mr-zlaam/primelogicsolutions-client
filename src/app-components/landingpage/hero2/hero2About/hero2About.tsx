@@ -13,6 +13,7 @@ function Hero2About() {
         <div className="image">
           <Image
             src={"https://i.postimg.cc/1trS2rS0/image.png"}
+            loading="lazy"
             alt="Hero2About"
             width={500}
             height={500}

@@ -5,8 +5,8 @@ function Hero3Content() {
   return (
     <React.Fragment>
       <PageWrapper>
-        <span className="flex items-center">
-          <span className="border border-primary w-[40px] mx-4" />
+        <span className="flex ">
+          <span className="border-2 border-l-0 border-r-0 border-b-0 border-primary w-[40px] mx-4 mt-3" />
           <span className="text-2xl font-semibold text-primary">
             What We Do? <br />
             <span className="font-bold text-3xl text-background">

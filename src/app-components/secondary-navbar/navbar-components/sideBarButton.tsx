@@ -36,6 +36,7 @@ function SideBarCircleButton() {
               width={200}
               height={200}
               alt="Logo"
+              loading="lazy"
             />
           </div>
           <h2 className="text-2xl font-bold mb-4">About Us</h2>
