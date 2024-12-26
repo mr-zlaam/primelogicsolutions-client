@@ -1,4 +1,4 @@
-import PageWrapper from "@/app-components/pagewrapper/pagewrapper";
+import PageWrapper from "@/appComponents/pagewrapper/pagewrapper";
 import { TfiLayoutLineSolid } from "react-icons/tfi";
 
 import React from "react";

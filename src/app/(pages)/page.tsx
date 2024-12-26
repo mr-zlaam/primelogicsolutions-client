@@ -1,4 +1,4 @@
-import LandingComponents from "@/app-components/landingpage/landingComponents";
+import LandingComponents from "@/pageComponent/landingpage/landingComponents";
 import React from "react";
 
 export default function HomePage() {

@@ -1,4 +1,4 @@
-import PageWrapper from "@/app-components/pagewrapper/pagewrapper";
+import PageWrapper from "@/appComponents/pagewrapper/pagewrapper";
 import React from "react";
 
 function Hero3Content() {

@@ -1,4 +1,4 @@
-import PageWrapper from "@/app-components/pagewrapper/pagewrapper";
+import PageWrapper from "@/appComponents/pagewrapper/pagewrapper";
 import {} from "react";
 import { SiBlockchaindotcom } from "react-icons/si";
 import { MdDataExploration } from "react-icons/md";

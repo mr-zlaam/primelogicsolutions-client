@@ -1,6 +1,6 @@
-import PrimaryNavBar from "@/app-components/primary-navbar";
-import SecondaryNavbar from "@/app-components/secondary-navbar";
-import { menuData } from "@/app-components/secondary-navbar/secondaryMenus";
+import PrimaryNavBar from "@/appComponents/primaryNavbar";
+import SecondaryNavbar from "@/appComponents/secondary-navbar";
+import { menuData } from "@/appComponents/secondary-navbar/secondaryMenus";
 import {} from "react";
 
 function PageLayout({ children }: { children: React.ReactNode }) {
