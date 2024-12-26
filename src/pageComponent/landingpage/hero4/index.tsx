@@ -1,7 +1,6 @@
 import React from "react";
-import SectionLeft from "./section-left/section-left";
-import SectionRight from "./section-right/section-right";
-
+import SectionLeft from "./sectionLeft/sectionLeft";
+import SectionRight from "./sectionRight/sectionRight";
 function Hero4Component() {
   return (
     <React.Fragment>

@@ -3,7 +3,7 @@ import React from "react";
 
 function SectionRight() {
   return (
-    <div className="relative">
+    <div className="relative px-3">
       <Image
         src={"https://i.postimg.cc/qqbF1NVp/image.png"}
         loading="lazy"
@@ -12,7 +12,7 @@ function SectionRight() {
         height={600}
         className="relative z-[4]"
       />
-      <div className="absolute bottom-20 -left-24 animate-y-tofro z-[5]">
+      <div className="absolute bottom-20 -left-24 animate-y-tofro z-[5] hidden lg:block">
         <Image
           src={"https://i.postimg.cc/kgtHyMjd/image.png"}
           loading="lazy"
@@ -21,7 +21,7 @@ function SectionRight() {
           height={500}
         />
       </div>
-      <div className="">
+      <div className="hidden lg:block">
         <Image
           src={"https://i.postimg.cc/SQvVtFYQ/image.png"}
           loading="lazy"

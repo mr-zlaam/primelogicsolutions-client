@@ -205,7 +205,7 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 100vh;
+  height: 89vh;
   padding-top: 10rem;
   /* Allows for absolute positioning of child elements if needed */
 }

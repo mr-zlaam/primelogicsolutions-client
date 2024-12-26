@@ -37,8 +37,8 @@ function Hero1Component() {
               </h2>
             </div>
             <div className="flex flex-col space-y-4 mt-4 ">
-              <HireUsButtoncComponents />
               <ConsultationButtonComponent />
+              <HireUsButtoncComponents />
             </div>
           </div>
         </PageWrapper>
