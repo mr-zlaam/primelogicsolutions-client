@@ -4,13 +4,13 @@
   "private": true,
   "scripts": {
     "type-check": "tsc --noEmit",
-    "lint": "eslint . --ext .js,.ts,.jsx,.tsx --max-warnings=0 && pnpm run type-check",
+    "lint": "concurrently \"eslint . --ext .js,.ts,.jsx,.tsx --max-warnings=0\"  \"pnpm run type-check\"",
     "lint:fix": "eslint --fix . --ext .js,.ts,.jsx,.tsx",
-    "dev": "concurrently  \"pnpm type-check\" \"pnpm fmt\"  \"pnpm lint  && next dev\"",
+    "dev": "concurrently   \"pnpm fmt\"  \"pnpm lint  && next dev\"",
     "build": "pnpm run fmt && pnpm  type-check && pnpm lint && next build",
     "fmt": "prettier --write \"**/*.{ts,tsx,js,jsx,md,mdx,css,yaml,yml}\"",
     "fmt:check": "prettier --check \"**/*.{ts,tsx,js,jsx,md,mdx,css,yaml,yml}\"",
-    "precommit": "pnpm lint:fix && concurrently \"pnpm run lint\" \"pnpm run type-check && pnpm run fmt && git add .\"",
+    "precommit": "concurrently \"pnpm run lint\" \"pnpm run fmt && git add .\"",
     "start": "next start",
     "commit-lint": "commitlint  --edit",
     "prepare": "husky"
