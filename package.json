@@ -6,7 +6,7 @@
     "type-check": "tsc --noEmit",
     "lint": "eslint . --ext .js,.ts,.jsx,.tsx --max-warnings=0 && pnpm run type-check",
     "lint:fix": "eslint --fix . --ext .js,.ts,.jsx,.tsx",
-    "dev": "pnpm run fmt && pnpm type-check && pnpm lint && pnpm lint:fix && next dev",
+    "dev": "concurrently  \"pnpm type-check\" \"pnpm fmt\"  \"pnpm lint  && next dev\"",
     "build": "pnpm run fmt && pnpm  type-check && pnpm lint && next build",
     "fmt": "prettier --write \"**/*.{ts,tsx,js,jsx,md,mdx,css,yaml,yml}\"",
     "fmt:check": "prettier --check \"**/*.{ts,tsx,js,jsx,md,mdx,css,yaml,yml}\"",
@@ -52,3 +52,4 @@
     "typescript": "^5"
   }
 }
+
