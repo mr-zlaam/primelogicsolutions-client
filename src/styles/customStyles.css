@@ -296,11 +296,22 @@ grammarly-extension {
   height: 100%;
   background-color: #000025ef;
 }
+
 /* Pattern for hero7 section in ladingpage */
 .pattern-hero-7 {
   width: 100%;
   height: 100%;
   background: url("https://i.postimg.cc/3RvMCPFN/image.png") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.pattern-hero-9 {
+  width: 100%;
+  height: 100%;
+  background: url("https://i.postimg.cc/8CLHL6y2/image.png") no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
