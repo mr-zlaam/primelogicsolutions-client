@@ -8,6 +8,7 @@ import Hero6Component from "@/pageComponent/landingpage/hero6";
 import Hero7Component from "./hero7";
 import Hero8Component from "./hero8";
 import Hero9Component from "./hero9";
+import Hero10Component from "./hero10";
 function LandingComponents() {
   return (
     <React.Fragment>
@@ -20,6 +21,7 @@ function LandingComponents() {
       <Hero7Component />
       <Hero8Component />
       <Hero9Component />
+      <Hero10Component />
     </React.Fragment>
   );
 }
