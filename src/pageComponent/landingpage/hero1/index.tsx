@@ -23,7 +23,7 @@ function Hero1Component() {
           <div className="h-[60px] animate-heart w-[60px] relative top-20 left-[-7rem] rounded-full bg-primary" />
           <div className="flex flex-col">
             <h1 className="relative top-10 text-3xl  sm:text-7xl font-[900]">
-              <span className="text-background">One</span> <span className="text-background">Stop</span>
+              <span className="text-background">One</span> <span className="text-background">Step</span>
               <TypewriterEffectSmooth
                 words={words}
                 cursorClassName="hidden"
