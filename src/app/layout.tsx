@@ -4,6 +4,7 @@ import "./globals.css";
 import "@/styles/customStyles.css";
 import NextTopLoader from "nextjs-toploader";
 import Preloader from "@/appComponents/preloader/Preloader";
+import AnnouncementPage from "@/appComponents/counter/counter";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -20,14 +21,16 @@ export const metadata: Metadata = {
   title: "Prime Logic Solution",
   description: "One Stop Online Solution For Your Business"
 };
-
+const showcounter = true;
 export default function RootLayout({
   children
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Preloader />
 
@@ -36,7 +39,7 @@ export default function RootLayout({
           showSpinner={false}
           color="#F97316"
         />
-        <main>{children}</main>
+        <main>{showcounter ? <AnnouncementPage /> : children}</main>
       </body>
     </html>
   );
