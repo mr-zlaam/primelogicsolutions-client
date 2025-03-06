@@ -1,4 +1,5 @@
 import Header from "@/pagecomponents/homePageComponents/header";
+import React from "react";
 
 export default function PageLayout({
   children
@@ -12,4 +13,3 @@ export default function PageLayout({
     </>
   );
 }
-

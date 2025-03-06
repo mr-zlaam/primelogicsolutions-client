@@ -1,6 +1,7 @@
 // src/components/sections/compliance/SearchBar.tsx
 "use client";
-import { FC } from "react";
+import React from "react";
+import type { FC } from "react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { cn } from "@/lib/utils";
 

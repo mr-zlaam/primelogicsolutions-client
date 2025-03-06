@@ -1,11 +1,11 @@
-/* eslint-disable @next/next/no-img-element */
 // src/components/sections/competitive-advantage/index.tsx
 "use client";
 import React from "react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { cn } from "@/lib/utils";
 import { FeatureItem } from "./FeatureItem";
-import { FeatureType } from "@/types";
+import type { FeatureType } from "@/types";
+import Link from "next/link";
 
 export const CompetitiveAdvantage: React.FC = () => {
   const titleAnimation = useScrollAnimation({
@@ -119,7 +119,7 @@ export const CompetitiveAdvantage: React.FC = () => {
                   "mt-8 transition-all duration-700",
                   subtitleAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
                 )}>
-                <a
+                <Link
                   href="#"
                   className="inline-flex items-center text-orange-500 font-medium hover:underline">
                   LEARN MORE
@@ -137,7 +137,7 @@ export const CompetitiveAdvantage: React.FC = () => {
                     <path d="M5 12h14" />
                     <path d="m12 5 7 7-7 7" />
                   </svg>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

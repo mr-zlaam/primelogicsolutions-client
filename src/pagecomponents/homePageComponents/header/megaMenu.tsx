@@ -1,12 +1,13 @@
+/* eslint-disable no-undef */
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, type JSX } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { MenuItemType } from "@/lib/menu-data";
+import type { MenuItemType } from "@/lib/menu-data";
 
 // Animation variants
 const menuVariants = {
@@ -26,7 +27,7 @@ interface MegaMenuProps {
   isScrolled: boolean;
 }
 
-export default function MegaMenu({ items, isScrolled }: MegaMenuProps) {
+export default function MegaMenu({ items, isScrolled }: MegaMenuProps): JSX.Element {
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const [menuTimeout, setMenuTimeout] = useState<NodeJS.Timeout | null>(null);
   const menuRef = useRef<HTMLDivElement>(null);
@@ -34,17 +35,21 @@ export default function MegaMenu({ items, isScrolled }: MegaMenuProps) {
   // Clean up timeouts
   useEffect(() => {
     return () => {
-      if (menuTimeout) clearTimeout(menuTimeout);
+      if (menuTimeout !== null) {
+        clearTimeout(menuTimeout);
+      }
     };
   }, [menuTimeout]);
 
   // Menu interaction handlers
-  const handleMenuEnter = (menuTitle: string) => {
-    if (menuTimeout) clearTimeout(menuTimeout);
+  const handleMenuEnter = (menuTitle: string): void => {
+    if (menuTimeout !== null) {
+      clearTimeout(menuTimeout);
+    }
     setActiveMenu(menuTitle);
   };
 
-  const handleMenuLeave = () => {
+  const handleMenuLeave = (): void => {
     const timeout = setTimeout(() => setActiveMenu(null), 200);
     setMenuTimeout(timeout);
   };
@@ -62,7 +67,7 @@ export default function MegaMenu({ items, isScrolled }: MegaMenuProps) {
         <div
           key={item.id}
           className="relative">
-          {item.href && !item.children ? (
+          {item.href !== undefined && item.children === undefined ? (
             <Link
               href={item.href}
               className={cn("flex items-center px-3 py-3 text-sm font-medium rounded-md transition-colors", textColor, hoverColor, textShadow)}>
@@ -86,7 +91,7 @@ export default function MegaMenu({ items, isScrolled }: MegaMenuProps) {
 
       {/* Centered Mega Menu */}
       <AnimatePresence>
-        {activeMenu && (
+        {activeMenu !== null && (
           <motion.div
             initial="hidden"
             animate="visible"
@@ -94,7 +99,7 @@ export default function MegaMenu({ items, isScrolled }: MegaMenuProps) {
             variants={menuVariants}
             className="fixed left-0 right-0 top-[6rem] z-50 mx-auto w-full max-w-6xl bg-white rounded-md shadow-lg"
             onMouseEnter={() => {
-              if (menuTimeout) {
+              if (menuTimeout !== null) {
                 clearTimeout(menuTimeout);
                 setMenuTimeout(null);
               }
@@ -103,7 +108,7 @@ export default function MegaMenu({ items, isScrolled }: MegaMenuProps) {
             {items.map(
               (item) =>
                 item.title === activeMenu &&
-                item.children && (
+                item.children !== undefined && (
                   <div
                     key={item.id}
                     className="p-6">
@@ -112,7 +117,7 @@ export default function MegaMenu({ items, isScrolled }: MegaMenuProps) {
                       <div className="col-span-1">
                         <div className="relative h-[200px] w-[200px] rounded-lg overflow-hidden">
                           <Image
-                            src={item.image || "/images/menu/default.jpg"}
+                            src={item.image !== undefined ? item.image : "/images/menu/default.jpg"}
                             alt={`${item.title} featured image`}
                             fill
                             sizes="200px"
@@ -121,7 +126,7 @@ export default function MegaMenu({ items, isScrolled }: MegaMenuProps) {
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-4">
                             <h3 className="text-white text-lg font-bold">{item.title}</h3>
-                            {item.description && <p className="text-white/90 text-xs mt-1">{item.description}</p>}
+                            {item.description !== undefined && <p className="text-white/90 text-xs mt-1">{item.description}</p>}
                           </div>
                         </div>
                       </div>
@@ -154,28 +159,30 @@ interface MainMenuItemProps {
   parentTitle: string;
 }
 
-function MainMenuItem({ item, columnIndex }: MainMenuItemProps) {
-  const [showSubMenu, setShowSubMenu] = useState(false);
+function MainMenuItem({ item, columnIndex }: MainMenuItemProps): JSX.Element {
+  const [showSubMenu, setShowSubMenu] = useState<boolean>(false);
   const [menuTimeout, setMenuTimeout] = useState<NodeJS.Timeout | null>(null);
   const itemRef = useRef<HTMLDivElement>(null);
 
   // Clean up timeouts
   useEffect(() => {
     return () => {
-      if (menuTimeout) clearTimeout(menuTimeout);
+      if (menuTimeout !== null) {
+        clearTimeout(menuTimeout);
+      }
     };
   }, [menuTimeout]);
 
   // Mouse event handlers
-  const handleMouseEnter = () => {
-    if (menuTimeout) {
+  const handleMouseEnter = (): void => {
+    if (menuTimeout !== null) {
       clearTimeout(menuTimeout);
       setMenuTimeout(null);
     }
     setShowSubMenu(true);
   };
 
-  const handleMouseLeave = () => {
+  const handleMouseLeave = (): void => {
     const timeout = setTimeout(() => setShowSubMenu(false), 100);
     setMenuTimeout(timeout);
   };
@@ -193,15 +200,15 @@ function MainMenuItem({ item, columnIndex }: MainMenuItemProps) {
         <h3 className="text-primary font-semibold text-sm tracking-wide">{item.title}</h3>
       </div>
 
-      {item.children && (
+      {item.children !== undefined && item.children.length > 0 && (
         <ul className="space-y-2">
           {item.children.slice(0, 5).map((subItem) => (
             <li key={subItem.id}>
               <Link
-                href={subItem.href || "#"}
+                href={subItem.href !== undefined ? subItem.href : "#"}
                 className="text-gray-600 hover:text-secondary transition-colors text-sm flex items-center justify-between group">
                 {subItem.title}
-                {subItem.children && subItem.children.length > 0 && <ChevronRight className="h-4 w-4 opacity-70" />}
+                {subItem.children !== undefined && subItem.children.length > 0 && <ChevronRight className="h-4 w-4 opacity-70" />}
               </Link>
             </li>
           ))}
@@ -218,7 +225,7 @@ function MainMenuItem({ item, columnIndex }: MainMenuItemProps) {
       )}
 
       {/* Mini-mega menu */}
-      {item.children && showSubMenu && (
+      {item.children !== undefined && showSubMenu && (
         <AnimatePresence>
           <motion.div
             initial="hidden"
@@ -227,7 +234,7 @@ function MainMenuItem({ item, columnIndex }: MainMenuItemProps) {
             variants={miniMenuVariants}
             className={cn("absolute top-0 z-30 bg-white rounded-md shadow-lg p-4 min-w-[220px]", showToLeft ? "right-full mr-2" : "left-full ml-2")}
             onMouseEnter={() => {
-              if (menuTimeout) {
+              if (menuTimeout !== null) {
                 clearTimeout(menuTimeout);
                 setMenuTimeout(null);
               }
@@ -239,7 +246,7 @@ function MainMenuItem({ item, columnIndex }: MainMenuItemProps) {
               {item.children.map((subItem) => (
                 <li key={subItem.id}>
                   <Link
-                    href={subItem.href || "#"}
+                    href={subItem.href !== undefined ? subItem.href : "#"}
                     className="text-gray-600 hover:text-secondary transition-colors text-sm block py-1">
                     {subItem.title}
                   </Link>
@@ -252,4 +259,3 @@ function MainMenuItem({ item, columnIndex }: MainMenuItemProps) {
     </div>
   );
 }
-

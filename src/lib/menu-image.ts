@@ -19,10 +19,10 @@ const DEFAULT_IMAGES = {
  */
 export const getMenuImage = (image?: string, category?: string): string => {
   // If an image is explicitly provided, use that
-  if (image) return image;
+  if (image !== null && image !== undefined) return image;
 
   // Otherwise use the default for the category
-  if (category) {
+  if (category !== null && category !== undefined) {
     const lowerCategory = category.toLowerCase();
     if (lowerCategory.includes("service")) return DEFAULT_IMAGES.services;
     if (lowerCategory.includes("industr")) return DEFAULT_IMAGES.industries;
@@ -39,10 +39,10 @@ export const getMenuImage = (image?: string, category?: string): string => {
  * @param imagePath The image path to check
  * @returns A promise that resolves to true if the image exists
  */
-export const checkImageExists = async (imagePath: string): Promise<boolean> => {
+export const checkImageExists = (imagePath: string): Promise<boolean> => {
   // In a real implementation, you might want to validate the image
   // For now, let's assume all paths with /images/ are valid
-  return imagePath.includes("/images/");
+  return Promise.resolve(imagePath.includes("/images/"));
 };
 
 /**

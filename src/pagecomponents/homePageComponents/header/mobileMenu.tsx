@@ -1,31 +1,36 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { menuData, MenuItemType } from "@/lib/menu-data";
+import { menuData, type MenuItemType } from "@/lib/menu-data";
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { type JSX, useState } from "react";
 
-export function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
+interface MobileMenuProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+export function MobileMenu({ isOpen, onClose }: MobileMenuProps): JSX.Element {
   const [expandedItems, setExpandedItems] = useState<number[]>([]);
 
-  const toggleItem = (id: number) => {
+  const toggleItem = (id: number): void => {
     setExpandedItems((prev) => (prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]));
   };
 
   // Recursive function to render menu items
-  const renderMenuItem = (item: MenuItemType, depth = 0) => {
+  const renderMenuItem = (item: MenuItemType, depth = 0): JSX.Element => {
     const isExpanded = expandedItems.includes(item.id);
-    const hasChildren = item.children && item.children.length > 0;
+    const hasChildren = Boolean(item.children && item.children.length > 0);
 
     return (
       <li
         key={item.id}
         className={cn("w-full", depth > 0 ? "ml-4" : "")}>
         <div className="flex items-center justify-between">
-          {item.href ? (
+          {item.href !== undefined && item.href !== null ? (
             <Link
               href={item.href}
               className="py-3 text-lg w-full text-gray-900"
@@ -43,8 +48,8 @@ export function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClose: () =
           )}
         </div>
 
-        {hasChildren && isExpanded && (
-          <ul className="border-l-2 border-gray-200 mt-1 mb-2">{item.children!.map((child) => renderMenuItem(child, depth + 1))}</ul>
+        {hasChildren && isExpanded && item.children && (
+          <ul className="border-l-2 border-gray-200 mt-1 mb-2">{item.children.map((child) => renderMenuItem(child, depth + 1))}</ul>
         )}
       </li>
     );
@@ -114,4 +119,3 @@ export function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClose: () =
     </AnimatePresence>
   );
 }
-

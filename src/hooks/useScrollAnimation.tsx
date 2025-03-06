@@ -40,6 +40,7 @@ export function useScrollAnimation({ threshold = 0.1, rootMargin = "0px", trigge
     observer.observe(element);
 
     return () => {
+      // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
       if (element) {
         observer.unobserve(element);
       }

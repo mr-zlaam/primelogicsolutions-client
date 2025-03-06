@@ -1,5 +1,5 @@
 "use client";
-import { ReactNode, useState } from "react";
+import React, { type ReactNode, useState } from "react";
 import { motion } from "framer-motion";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
@@ -49,8 +49,7 @@ export default function FlipCard({ frontContent, backContent, index = 0, backgro
         }}>
         {/* Front of card */}
         <div className="absolute w-full h-full backface-hidden rounded-lg shadow-lg overflow-hidden">
-          {/* Background image if provided */}
-          {backgroundImage && (
+          {backgroundImage !== null && (
             <>
               <div
                 className="absolute inset-0 bg-cover bg-center"

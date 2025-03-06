@@ -9,7 +9,7 @@ import { Menu } from "lucide-react";
 import { menuData } from "@/lib/menu-data";
 import MegaMenu from "./megaMenu";
 import { MobileMenu } from "./mobileMenu";
-
+import React from "react";
 // Mobile menu component
 
 export default function Header() {
@@ -127,4 +127,3 @@ export default function Header() {
     </header>
   );
 }
-

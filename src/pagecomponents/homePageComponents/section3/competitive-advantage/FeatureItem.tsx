@@ -1,8 +1,9 @@
 "use client";
-import { FC } from "react";
+import type { FC } from "react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { cn } from "@/lib/utils";
-import { FeatureType } from "@/types";
+import type { FeatureType } from "@/types";
+import React from "react";
 
 interface FeatureItemProps {
   feature: FeatureType;
@@ -46,4 +47,3 @@ export const FeatureItem: FC<FeatureItemProps> = ({ feature, delay }) => {
     </div>
   );
 };
-

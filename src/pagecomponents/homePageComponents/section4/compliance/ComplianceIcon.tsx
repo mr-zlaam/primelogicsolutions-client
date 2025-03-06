@@ -1,7 +1,8 @@
 // src/components/sections/compliance/ComplianceIcon.tsx
 "use client";
-import { FC } from "react";
 import Image from "next/image";
+import React from "react";
+import type { FC } from "react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { cn } from "@/lib/utils";
 

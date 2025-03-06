@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import React from "react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import FlipCard from "./flipCard";
 import { services } from "./cardContent";
@@ -21,7 +22,7 @@ const getIconComponent = (iconName: string) => {
     Wifi
   };
 
-  return iconMap[iconName] || Lightbulb;
+  return iconMap[iconName] ?? Lightbulb;
 };
 
 export default function Services() {
@@ -121,4 +122,3 @@ export default function Services() {
     </>
   );
 }
-
