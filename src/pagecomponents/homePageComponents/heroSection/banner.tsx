@@ -107,7 +107,7 @@ export const Banner = ({ banner }: ComponentProps) => {
   };
 
   return (
-    <section className="relative col-span-12 h-[calc(86.2dvh)] overflow-hidden text-white lg:px-10 px-20">
+    <section className="relative col-span-12 h-[calc(87.2dvh)] overflow-hidden text-white lg:px-10 px-20">
       <AnimatePresence>
         <motion.div
           key={activeIndex}
