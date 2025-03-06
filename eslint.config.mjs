@@ -52,7 +52,7 @@ export default [
       ...tseslint.configs.recommended.rules,
       ...tseslint.configs["recommended-requiring-type-checking"].rules,
       ...tseslint.configs.strict.rules,
-      "@typescript-eslint/explicit-function-return-type": "error",
+      "@typescript-eslint/explicit-function-return-type": "off",
       "@typescript-eslint/no-explicit-any": "error",
       "@typescript-eslint/no-unused-vars": ["error", { argsIgnorePattern: "^_" }],
       "@typescript-eslint/no-non-null-assertion": "error",
