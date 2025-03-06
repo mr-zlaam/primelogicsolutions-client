@@ -56,7 +56,7 @@ export default function MegaMenu({ items, isScrolled }: MegaMenuProps) {
 
   return (
     <nav
-      className="hidden lg:flex items-center space-x-2"
+      className="hidden lg:flex items-center space-x-1"
       ref={menuRef}>
       {items.map((item) => (
         <div
@@ -92,7 +92,7 @@ export default function MegaMenu({ items, isScrolled }: MegaMenuProps) {
             animate="visible"
             exit="exit"
             variants={menuVariants}
-            className={cn("fixed left-0 right-0 top-[6.5rem] z-50 mx-auto w-full max-w-6xl bg-white rounded-md shadow-lg")}
+            className="fixed left-0 right-0 top-[6rem] z-50 mx-auto w-full max-w-6xl bg-white rounded-md shadow-lg"
             onMouseEnter={() => {
               if (menuTimeout) {
                 clearTimeout(menuTimeout);
