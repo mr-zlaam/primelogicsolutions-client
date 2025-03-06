@@ -92,34 +92,3 @@ export const industries: IndustryCard[] = [
   }
 ];
 
-// Technologies data
-export const technologies: TechnologyCard[] = [
-  {
-    id: "artificial-intelligence",
-    title: "Artificial Intelligence",
-    icon: "Brain",
-    frontContent: "Intelligent automation and predictive analytics for business growth",
-    backContent: ["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics"],
-    link: "/technologies/artificial-intelligence",
-    backgroundImage: "/images/ai-bg.jpg"
-  },
-  {
-    id: "blockchain",
-    title: "Blockchain",
-    icon: "Link",
-    frontContent: "Secure, transparent, and decentralized data management",
-    backContent: ["Smart Contracts", "Supply Chain Traceability", "Digital Identity", "Payment Solutions"],
-    link: "/technologies/blockchain",
-    backgroundImage: "/images/blockchain-bg.jpg"
-  },
-  {
-    id: "iot",
-    title: "Internet of Things",
-    icon: "Wifi",
-    frontContent: "Connected devices for data-driven insights and automation",
-    backContent: ["Sensor Networks", "Remote Monitoring", "Smart Facilities", "Predictive Maintenance"],
-    link: "/technologies/iot",
-    backgroundImage: "/images/iot-bg.jpg"
-  }
-];
-
