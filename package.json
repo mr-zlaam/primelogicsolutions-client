@@ -7,6 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
+    "commit": "commit",
+    "commit-lint": "commitlint  --edit",
     "prepare": "husky"
   },
   "dependencies": {
@@ -23,6 +25,9 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.7.1",
+    "@commitlint/config-conventional": "^19.7.1",
+    "@commitlint/prompt-cli": "^19.7.1",
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
@@ -45,9 +50,10 @@
   },
   "lint-staged": {
     "*.{ts,tsx}": [
+      "eslint .",
+      "tsc --noEmit",
       "eslint --fix",
       "prettier --write"
     ]
   }
 }
-

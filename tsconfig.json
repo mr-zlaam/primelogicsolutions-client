@@ -40,12 +40,13 @@
   },
   "include": [
     "next-env.d.ts",
+    "commitlint.config.mjs", // Add this line
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
     "src/**/*",
     "eslint.config.mjs",
-    "postcss.config.mjs"
+    "postcss.config.mjs",
   ],
   "exclude": [
     "node_modules"

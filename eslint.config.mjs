@@ -104,7 +104,7 @@ export default [
 
   // Override rules for specific file patterns
   {
-    files: ["**/*.tsx"],
+    files: ["**/*.tsx", "commitlint.config.mjs"],
     rules: {
       "@typescript-eslint/explicit-function-return-type": "off" // Often inferred in React components
     }
