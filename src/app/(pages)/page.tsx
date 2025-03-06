@@ -1,4 +1,4 @@
-import HeroComponent from "@/appComponents/homePageComponents/heroSection";
+import HeroComponent from "@/pagecomponents/homePageComponents/heroSection";
 import {} from "react";
 
 function Home() {

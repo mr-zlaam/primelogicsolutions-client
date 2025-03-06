@@ -1,4 +1,4 @@
-import Header from "@/appComponents/homePageComponents/header";
+import Header from "@/pagecomponents/homePageComponents/header";
 
 export default function PageLayout({
   children
