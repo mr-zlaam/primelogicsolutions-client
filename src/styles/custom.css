@@ -1,65 +1,18 @@
+/* Add these styles to your globals.css */
 @import "tailwindcss";
 
-@plugin "tailwindcss-animate";
+.perspective-\[1000px\] {
+  perspective: 1000px;
+}
 
-@layer components {
-  /* Header styles */
-  .header-not-scrolled {
-    @apply bg-white text-primary shadow-sm;
-  }
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
 
-  .header-scrolled {
-    @apply bg-primary text-white shadow-md;
-  }
+.backface-hidden {
+  backface-visibility: hidden;
+}
 
-  /* Apply text shadow for better visibility on white header */
-  .header-text-shadow {
-    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
-  }
-
-  /* Mega Menu specific styles */
-  .mega-menu {
-    @apply fixed left-1/2 -translate-x-1/2 w-full max-w-6xl bg-white shadow-lg rounded-md z-50;
-    top: var(--header-height);
-  }
-
-  /* Mini-mega menu positioning */
-  .mini-mega-left {
-    @apply absolute right-full mr-2;
-  }
-
-  .mini-mega-right {
-    @apply absolute left-full ml-2;
-  }
-
-  /* Animation classes */
-  .fade-in {
-    @apply transition-opacity duration-200 ease-in-out opacity-0;
-  }
-
-  .fade-in.visible {
-    @apply opacity-100;
-  }
-
-  /* Header transitions */
-  .header-transition {
-    @apply transition-all duration-300 ease-in-out;
-  }
-
-  /* Mobile menu styles */
-  .mobile-menu-container {
-    @apply fixed inset-0 z-50 bg-black/20 backdrop-blur-sm;
-  }
-
-  .mobile-menu-panel {
-    @apply fixed right-0 top-0 h-full w-4/5 max-w-sm bg-white shadow-xl z-50 overflow-y-auto;
-  }
-
-  .mobile-menu-item {
-    @apply text-gray-900 py-3 text-lg w-full;
-  }
-
-  .mobile-menu-button {
-    @apply flex items-center justify-between w-full py-3 text-lg text-gray-900;
-  }
+.rotate-y-180 {
+  transform: rotateY(180deg);
 }
