@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+// src/components/sections/competitive-advantage/index.tsx
 "use client";
 import React from "react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
@@ -23,6 +24,16 @@ export const CompetitiveAdvantage: React.FC = () => {
   });
 
   const imageAnimation = useScrollAnimation({
+    threshold: 0.2,
+    triggerOnce: true
+  });
+
+  const volunteersAnimation = useScrollAnimation({
+    threshold: 0.2,
+    triggerOnce: true
+  });
+
+  const businessAnimation = useScrollAnimation({
     threshold: 0.2,
     triggerOnce: true
   });
@@ -57,7 +68,7 @@ export const CompetitiveAdvantage: React.FC = () => {
               <h2
                 ref={subtitleAnimation.ref as React.RefObject<HTMLHeadingElement>}
                 className={cn(
-                  "text-4xl md:text-5xl font-bold text-primary leading-tight transition-all duration-700",
+                  "text-4xl md:text-5xl font-bold text-navy-800 leading-tight transition-all duration-700",
                   subtitleAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
                 )}>
                 Unmatched Competitive Edge: Future-Ready Solutions for American Businesses
@@ -66,7 +77,7 @@ export const CompetitiveAdvantage: React.FC = () => {
 
             <div className="grid grid-cols-1 gap-6">
               <div className="flex items-start gap-4">
-                <div className="text-5xl font-bold text-secondary">25</div>
+                <div className="text-5xl font-bold text-orange-500">25</div>
                 <div>
                   <h3 className="font-semibold text-xl text-gray-800">Years of Industry Leadership</h3>
                   <p
@@ -110,7 +121,7 @@ export const CompetitiveAdvantage: React.FC = () => {
                 )}>
                 <a
                   href="#"
-                  className="inline-flex items-center text-primary text-2xl  duration-300 transition-colors  font-bold hover:text-secondary">
+                  className="inline-flex items-center text-orange-500 font-medium hover:underline">
                   LEARN MORE
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -140,16 +151,21 @@ export const CompetitiveAdvantage: React.FC = () => {
             {/* Create a container for the stacked images */}
             <div className="relative h-[400px] md:h-[450px]">
               {/* First image (blue background - Technology) */}
-              <div className="absolute top-0 right-0 md:right-0 z-10 w-[90%] md:w-[80%] h-[60%]">
+              <div className="absolute top-0 right-0 md:right-0 z-30 w-[90%] md:w-[80%] h-[60%]">
                 <img
-                  src="https://placehold.co/600x500/000080/FFFFFF?text=Technology"
+                  src="https://placehold.co/600x400/000080/FFFFFF?text=Technology"
                   alt="Technology visualization"
                   className="w-full h-full object-cover rounded-lg shadow-xl"
                 />
               </div>
 
               {/* Second image (green background - Volunteers) - positioned to overlap */}
-              <div className="absolute bottom-0 left-0 z-10 w-[60%] md:w-[55%] h-[50%]">
+              <div
+                ref={volunteersAnimation.ref as React.RefObject<HTMLDivElement>}
+                className={cn(
+                  "absolute bottom-0 z-20 w-[60%] md:w-[55%] h-[50%] transition-all duration-1000 transform",
+                  volunteersAnimation.isVisible ? "left-0 opacity-100" : "left-[25%] opacity-0"
+                )}>
                 <img
                   src="https://placehold.co/400x300/228B22/FFFFFF?text=Volunteers"
                   alt="Volunteer team"
@@ -158,9 +174,14 @@ export const CompetitiveAdvantage: React.FC = () => {
               </div>
 
               {/* Third image (dark background - Business) - positioned to overlap both */}
-              <div className="absolute bottom-[20%] right-[15%] z-15 w-[50%] md:w-[45%] h-[45%]">
+              <div
+                ref={businessAnimation.ref as React.RefObject<HTMLDivElement>}
+                className={cn(
+                  "absolute bottom-[20%] z-10 w-[50%] md:w-[45%] h-[45%] transition-all duration-1000 transform",
+                  businessAnimation.isVisible ? "right-[15%] opacity-100" : "right-[40%] opacity-0"
+                )}>
                 <img
-                  src="https://placehold.co/500x400/28282b/FFFFFF?text=Business"
+                  src="https://placehold.co/400x300/28282b/FFFFFF?text=Business"
                   alt="Business professionals"
                   className="w-full h-full object-cover rounded-lg shadow-lg"
                 />
@@ -172,4 +193,3 @@ export const CompetitiveAdvantage: React.FC = () => {
     </section>
   );
 };
-

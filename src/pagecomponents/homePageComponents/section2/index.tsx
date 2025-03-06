@@ -53,7 +53,7 @@ export default function Services() {
     <>
       <section
         ref={servicesRef as React.RefObject<HTMLElement>}
-        className="w-full py-16 bg-white">
+        className="w-full py-16 bg-[#F9FAFB]">
         <div className="container mx-auto px-4 md:px-6">
           <motion.div
             initial="hidden"
