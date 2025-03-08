@@ -11,6 +11,7 @@ import globals from "globals";
 export default [
   // Base ESLint recommended configuration
   eslint.configs.recommended,
+  "plugin:@next/next/recommended",
 
   // Global settings
   {
