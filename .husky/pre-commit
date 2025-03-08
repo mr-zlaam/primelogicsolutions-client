@@ -1,1 +1,1 @@
-bun lint-staged && bunx run tsc --noEmit
+bun lint-staged && bunx run type-check 
