@@ -5,7 +5,7 @@ export default async function ServicePage({ params }: { params: Promise<{ href: 
   const { href } = await params;
   console.info("Received path segments:", href);
 
-  const menuItem = findMenuItem(href, "SERVICES");
+  const menuItem = findMenuItem(href, "TECHNOLOGIES");
   if (menuItem === null || menuItem === undefined) return notFound();
   console.info(
     "Found menu item:",

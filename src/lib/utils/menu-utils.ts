@@ -21,7 +21,7 @@ function normalizePathSegment(segment: string): string {
  * @param pathSegments Array of path segments (e.g. ["data-and-analytics", "computer-vision"])
  * @returns The matching menu item or null if not found
  */
-export function findMenuItem(pathSegments: string[]): MenuItemType | null {
+export function findMenuItem(pathSegments: string[], PARENT_NAME: "SERVICES" | "TECHNOLOGIES" | "INDUSTRIES"): MenuItemType | null {
   if (pathSegments.length === 0) {
     return null;
   }
@@ -30,7 +30,7 @@ export function findMenuItem(pathSegments: string[]): MenuItemType | null {
   const normalizedSegments = pathSegments.map(normalizePathSegment);
 
   // Find services section
-  const servicesItem = menuData.find((item) => item.title === "SERVICES");
+  const servicesItem = menuData.find((item) => item.title === PARENT_NAME);
   if (!servicesItem || !servicesItem.children) {
     return null;
   }
