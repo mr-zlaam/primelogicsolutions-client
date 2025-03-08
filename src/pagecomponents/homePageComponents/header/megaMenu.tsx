@@ -7,8 +7,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
-import type { MenuItemType } from "@/lib/menu-data";
-
+import type { MenuItemType } from "@/types";
 // Animation variants
 const menuVariants = {
   hidden: { opacity: 0, y: 15 },

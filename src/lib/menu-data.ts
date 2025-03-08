@@ -1,19 +1,5 @@
-export interface MenuItemType {
-  id: number;
-  title: string;
-  description?: string;
-  pageData?: string | Sections[];
-  href?: string;
-  image?: string;
-  children?: MenuItemType[];
-}
-export interface Sections {
-  id: number;
-  title?: string;
-  subTitle?: string;
-  description?: string;
-  sectionChildren: Sections[];
-}
+import type { MenuItemType } from "@/types";
+
 export const menuData: MenuItemType[] = [
   {
     id: 1,
@@ -28,20 +14,22 @@ export const menuData: MenuItemType[] = [
     pageData: "",
     description: "Our comprehensive range of technology services",
     image: "https://placehold.co/200x200.jpg",
+    href: "/services",
     children: [
       {
         id: 7,
         title: "Software Development",
-        pageData: "",
         description: "Custom software solutions built for your business",
         image: "/images/menu/software-dev.jpg",
+        href: "software-development",
+
         children: [
           {
             id: 8,
             title: "Web Development",
             pageData: "",
             description: "",
-            href: "/services/web-development"
+            href: "software-development/web-development"
           },
           {
             id: 9,
@@ -966,4 +954,3 @@ export const menuData: MenuItemType[] = [
     href: "/contact"
   }
 ];
-

@@ -1,6 +1,7 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { menuData, type MenuItemType } from "@/lib/menu-data";
+import type { MenuItemType } from "@/types";
+import { menuData } from "@/lib/menu-data";
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown, X } from "lucide-react";
