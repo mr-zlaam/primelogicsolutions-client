@@ -51,7 +51,6 @@
   "lint-staged": {
     "*.{ts,tsx.json}": [
       "eslint .",
-      "bunx tsc --noEmit",
       "eslint --fix",
       "prettier --write"
     ]

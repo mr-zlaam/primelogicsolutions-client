@@ -1,1 +1,1 @@
-bun lint-staged
+bun lint-staged && bunx run tsc --noEmit

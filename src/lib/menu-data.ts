@@ -21,71 +21,70 @@ export const menuData: MenuItemType[] = [
         title: "Software Development",
         description: "Custom software solutions built for your business",
         image: "/images/menu/software-dev.jpg",
-        href: "software-development",
-
+        href: "/services/software-development",
         children: [
           {
             id: 8,
             title: "Web Development",
             pageData: "",
             description: "",
-            href: "software-development/web-development"
+            href: "/services/software-development/web-development"
           },
           {
             id: 9,
             title: "Mobile Development",
             pageData: "",
             description: "",
-            href: "/services/mobile-development"
+            href: "/services/software-development/mobile-development"
           },
           {
             id: 10,
             title: "SaaS Platforms",
             pageData: "",
             description: "",
-            href: "/services/saas-platforms"
+            href: "/services/software-development/saas-platforms"
           },
           {
             id: 101,
             title: "API Integration",
             pageData: "",
             description: "",
-            href: "/services/api-integration"
+            href: "/services/software-development/api-integration"
           },
           {
             id: 102,
             title: "Web 3.0",
             pageData: "",
             description: "",
-            href: "/services/web3"
+            href: "/services/software-development/web3"
           },
           {
             id: 103,
             title: "Salesforce Solutions",
             pageData: "",
             description: "",
-            href: "/services/salesforce"
+            href: "/services/software-development/salesforce"
           },
           {
             id: 104,
             title: "CMS Platforms",
             pageData: "",
             description: "",
-            href: "/services/cms"
+            href: "/services/software-development/cms"
           },
           {
             id: 105,
             title: "Progressive Web Apps",
             pageData: "",
             description: "",
-            href: "/services/pwa"
+            href: "/services/software-development/pwa"
           },
           {
             id: 106,
             title: "Game Development",
             pageData: "",
             description: "",
-            href: "/services/game-development"
+            href: "/services/software-development/game-development"
           }
         ]
       },
@@ -95,62 +94,63 @@ export const menuData: MenuItemType[] = [
         pageData: "",
         description: "Transform your data into actionable insights",
         image: "/images/menu/data-analytics.jpg",
+        href: "/services/data-and-analytics",
         children: [
           {
             id: 120,
             title: "Data Visualization",
             pageData: "",
             description: "",
-            href: "/services/data-visualization"
+            href: "/services/data-and-analytics/data-visualization"
           },
           {
             id: 130,
             title: "Predictive Analytics",
             pageData: "",
             description: "",
-            href: "/services/predictive-analytics"
+            href: "/services/data-and-analytics/predictive-analytics"
           },
           {
             id: 140,
             title: "Big Data",
             pageData: "",
             description: "",
-            href: "/services/big-data"
+            href: "/services/data-and-analytics/big-data"
           },
           {
             id: 141,
             title: "Machine Learning",
             pageData: "",
             description: "",
-            href: "/services/machine-learning"
+            href: "/services/data-and-analytics/machine-learning"
           },
           {
             id: 142,
             title: "Computer Vision",
             pageData: "",
             description: "",
-            href: "/services/computer-vision"
+            href: "/services/data-and-analytics/computer-vision"
           },
           {
             id: 143,
             title: "Data Cleansing",
             pageData: "",
             description: "",
-            href: "/services/data-cleansing"
+            href: "/services/data-and-analytics/data-cleansing"
           },
           {
             id: 144,
             title: "Data Engineering",
             pageData: "",
             description: "",
-            href: "/services/data-engineering"
+            href: "/services/data-and-analytics/data-engineering"
           },
           {
             id: 145,
             title: "Data Migration Services",
             pageData: "",
             description: "",
-            href: "/services/data-migration"
+            href: "/services/data-and-analytics/data-migration"
           }
         ]
       },
@@ -160,62 +160,63 @@ export const menuData: MenuItemType[] = [
         pageData: "",
         description: "Scalable infrastructure and seamless deployment",
         image: "/images/menu/cloud-devops.jpg",
+        href: "/services/cloud-and-devops",
         children: [
           {
             id: 151,
             title: "Cloud Solutions",
             pageData: "",
             description: "",
-            href: "/services/cloud-solutions"
+            href: "/services/cloud-and-devops/cloud-solutions"
           },
           {
             id: 152,
             title: "Automation Services",
             pageData: "",
             description: "",
-            href: "/services/automation"
+            href: "/services/cloud-and-devops/automation"
           },
           {
             id: 153,
             title: "CI/CD Pipelines",
             pageData: "",
             description: "",
-            href: "/services/cicd"
+            href: "/services/cloud-and-devops/cicd"
           },
           {
             id: 154,
             title: "Kubernetes Management",
             pageData: "",
             description: "",
-            href: "/services/kubernetes"
+            href: "/services/cloud-and-devops/kubernetes"
           },
           {
             id: 155,
             title: "Docker Containers",
             pageData: "",
             description: "",
-            href: "/services/docker"
+            href: "/services/cloud-and-devops/docker"
           },
           {
             id: 156,
             title: "Cost Optimization",
             pageData: "",
             description: "",
-            href: "/services/cost-optimization"
+            href: "/services/cloud-and-devops/cost-optimization"
           },
           {
             id: 157,
             title: "Disaster Recovery",
             pageData: "",
             description: "",
-            href: "/services/disaster-recovery"
+            href: "/services/cloud-and-devops/disaster-recovery"
           },
           {
             id: 158,
             title: "Serverless Computing",
             pageData: "",
             description: "",
-            href: "/services/serverless"
+            href: "/services/cloud-and-devops/serverless"
           }
         ]
       },
@@ -225,55 +226,56 @@ export const menuData: MenuItemType[] = [
         pageData: "",
         description: "Cutting-edge solutions for tomorrow's challenges",
         image: "/images/menu/emerging-tech.jpg",
+        href: "/services/emerging-technologies",
         children: [
           {
             id: 162,
             title: "Blockchain Solutions",
             pageData: "",
             description: "",
-            href: "/services/blockchain"
+            href: "/services/emerging-technologies/blockchain"
           },
           {
             id: 163,
             title: "Voice Technology",
             pageData: "",
             description: "",
-            href: "/services/voice-tech"
+            href: "/services/emerging-technologies/voice-tech"
           },
           {
             id: 164,
             title: "IoT Integration",
             pageData: "",
             description: "",
-            href: "/services/iot"
+            href: "/services/emerging-technologies/iot"
           },
           {
             id: 165,
             title: "AI Personalization",
             pageData: "",
             description: "",
-            href: "/services/ai-personalization"
+            href: "/services/emerging-technologies/ai-personalization"
           },
           {
             id: 166,
             title: "AR/VR Applications",
             pageData: "",
             description: "",
-            href: "/services/ar-vr"
+            href: "/services/emerging-technologies/ar-vr"
           },
           {
             id: 167,
             title: "Quantum Computing",
             pageData: "",
             description: "",
-            href: "/services/quantum"
+            href: "/services/emerging-technologies/quantum"
           },
           {
             id: 168,
             title: "Workflow AI",
             pageData: "",
             description: "",
-            href: "/services/workflow-ai"
+            href: "/services/emerging-technologies/workflow-ai"
           }
         ]
       },
@@ -283,48 +285,49 @@ export const menuData: MenuItemType[] = [
         pageData: "",
         description: "Visually stunning and user-focused design",
         image: "/images/menu/creative-design.jpg",
+        href: "/services/creative-and-design",
         children: [
           {
             id: 172,
             title: "Graphic Design",
             pageData: "",
             description: "",
-            href: "/services/graphic-design"
+            href: "/services/creative-and-design/graphic-design"
           },
           {
             id: 173,
             title: "UX/UI Design",
             pageData: "",
             description: "",
-            href: "/services/ux-ui"
+            href: "/services/creative-and-design/ux-ui"
           },
           {
             id: 174,
             title: "3D Modeling",
             pageData: "",
             description: "",
-            href: "/services/3d-modeling"
+            href: "/services/creative-and-design/3d-modeling"
           },
           {
             id: 175,
             title: "Motion Graphics",
             pageData: "",
             description: "",
-            href: "/services/motion-graphics"
+            href: "/services/creative-and-design/motion-graphics"
           },
           {
             id: 176,
             title: "Branding Services",
             pageData: "",
             description: "",
-            href: "/services/branding"
+            href: "/services/creative-and-design/branding"
           },
           {
             id: 177,
             title: "Infographic Design",
             pageData: "",
             description: "",
-            href: "/services/infographics"
+            href: "/services/creative-and-design/infographics"
           }
         ]
       },
@@ -334,48 +337,49 @@ export const menuData: MenuItemType[] = [
         pageData: "",
         description: "Data-driven strategies for growth",
         image: "/images/menu/digital-marketing.jpg",
+        href: "/services/digital-marketing",
         children: [
           {
             id: 182,
             title: "SEO Services",
             pageData: "",
             description: "",
-            href: "/services/seo"
+            href: "/services/digital-marketing/seo"
           },
           {
             id: 183,
             title: "Social Media",
             pageData: "",
             description: "",
-            href: "/services/social-media"
+            href: "/services/digital-marketing/social-media"
           },
           {
             id: 184,
             title: "Content Marketing",
             pageData: "",
             description: "",
-            href: "/services/content-marketing"
+            href: "/services/digital-marketing/content-marketing"
           },
           {
             id: 185,
             title: "Email Campaigns",
             pageData: "",
             description: "",
-            href: "/services/email-marketing"
+            href: "/services/digital-marketing/email-marketing"
           },
           {
             id: 186,
             title: "PPC Advertising",
             pageData: "",
             description: "",
-            href: "/services/ppc"
+            href: "/services/digital-marketing/ppc"
           },
           {
             id: 187,
             title: "Analytics & Reporting",
             pageData: "",
             description: "",
-            href: "/services/marketing-analytics"
+            href: "/services/digital-marketing/marketing-analytics"
           }
         ]
       }
@@ -387,6 +391,7 @@ export const menuData: MenuItemType[] = [
     pageData: "",
     description: "Specialized solutions for diverse sectors",
     image: "https://placehold.co/200x200.jpg",
+    href: "/industries",
     children: [
       {
         id: 501,
@@ -394,6 +399,7 @@ export const menuData: MenuItemType[] = [
         pageData: "",
         description: "Transforming patient care through technology",
         image: "/images/menu/healthcare.jpg",
+        href: "/industries/healthcare",
         children: [
           {
             id: 5011,
@@ -433,6 +439,7 @@ export const menuData: MenuItemType[] = [
         pageData: "",
         description: "Secure and innovative fintech solutions",
         image: "/images/menu/finance.jpg",
+        href: "/industries/finance",
         children: [
           {
             id: 5021,
@@ -472,6 +479,7 @@ export const menuData: MenuItemType[] = [
         pageData: "",
         description: "Elevating the digital shopping experience",
         image: "/images/menu/retail.jpg",
+        href: "/industries/retail",
         children: [
           {
             id: 5031,
@@ -511,6 +519,7 @@ export const menuData: MenuItemType[] = [
         pageData: "",
         description: "Optimizing production through digital transformation",
         image: "/images/menu/manufacturing.jpg",
+        href: "/industries/manufacturing",
         children: [
           {
             id: 5041,
@@ -550,6 +559,7 @@ export const menuData: MenuItemType[] = [
         pageData: "",
         description: "Innovative platforms for knowledge sharing",
         image: "/images/menu/education.jpg",
+        href: "/industries/education",
         children: [
           {
             id: 5051,
@@ -589,6 +599,7 @@ export const menuData: MenuItemType[] = [
         pageData: "",
         description: "Building the platforms of tomorrow",
         image: "/images/menu/technology.jpg",
+        href: "/industries/technology",
         children: [
           {
             id: 5061,
@@ -630,6 +641,7 @@ export const menuData: MenuItemType[] = [
     pageData: "",
     description: "Expertise across leading technology stacks",
     image: "https://placehold.co/200x200.jpg",
+    href: "/technologies",
     children: [
       {
         id: 9100,
@@ -637,47 +649,48 @@ export const menuData: MenuItemType[] = [
         pageData: "",
         description: "Modern frameworks for powerful web applications",
         image: "/images/menu/web-tech.jpg",
+        href: "/technologies/web",
         children: [
           {
             id: 9101,
             title: "React.js",
             pageData: "",
-            href: "/technologies/reactjs",
+            href: "/technologies/web/reactjs",
             description: "Building interactive UIs with React"
           },
           {
             id: 9102,
             title: "Angular",
             pageData: "",
-            href: "/technologies/angular",
+            href: "/technologies/web/angular",
             description: "Enterprise-grade applications with Angular"
           },
           {
             id: 9103,
             title: "Vue.js",
             pageData: "",
-            href: "/technologies/vuejs",
+            href: "/technologies/web/vuejs",
             description: "Progressive web frameworks with Vue"
           },
           {
             id: 9104,
             title: "Node.js",
             pageData: "",
-            href: "/technologies/nodejs",
+            href: "/technologies/web/nodejs",
             description: "Server-side JavaScript solutions"
           },
           {
             id: 9105,
             title: "Next.js",
             pageData: "",
-            href: "/technologies/nextjs",
+            href: "/technologies/web/nextjs",
             description: "React framework for production"
           },
           {
             id: 9106,
             title: "PHP/Laravel",
             pageData: "",
-            href: "/technologies/php-laravel",
+            href: "/technologies/web/php-laravel",
             description: "Elegant web applications with Laravel"
           }
         ]
@@ -688,47 +701,48 @@ export const menuData: MenuItemType[] = [
         pageData: "",
         description: "Cross-platform and native mobile development",
         image: "/images/menu/mobile-tech.jpg",
+        href: "/technologies/mobile",
         children: [
           {
             id: 9201,
             title: "React Native",
             pageData: "",
-            href: "/technologies/react-native",
+            href: "/technologies/mobile/react-native",
             description: "Cross-platform mobile apps with React Native"
           },
           {
             id: 9202,
             title: "Flutter",
             pageData: "",
-            href: "/technologies/flutter",
+            href: "/technologies/mobile/flutter",
             description: "Beautiful native apps with Flutter"
           },
           {
             id: 9203,
             title: "iOS/Swift",
             pageData: "",
-            href: "/technologies/ios-swift",
+            href: "/technologies/mobile/ios-swift",
             description: "Native iOS development with Swift"
           },
           {
             id: 9204,
             title: "Android/Kotlin",
             pageData: "",
-            href: "/technologies/android-kotlin",
+            href: "/technologies/mobile/android-kotlin",
             description: "Modern Android apps with Kotlin"
           },
           {
             id: 9205,
             title: "Progressive Web Apps",
             pageData: "",
-            href: "/technologies/pwa",
+            href: "/technologies/mobile/pwa",
             description: "Web apps with native-like experience"
           },
           {
             id: 9206,
             title: "Xamarin",
             pageData: "",
-            href: "/technologies/xamarin",
+            href: "/technologies/mobile/xamarin",
             description: ".NET-powered cross-platform development"
           }
         ]
@@ -739,47 +753,48 @@ export const menuData: MenuItemType[] = [
         pageData: "",
         description: "Infrastructure and deployment solutions",
         image: "/images/menu/cloud-tech.jpg",
+        href: "/technologies/cloud",
         children: [
           {
             id: 9301,
             title: "AWS",
             pageData: "",
-            href: "/technologies/aws",
+            href: "/technologies/cloud/aws",
             description: "Amazon Web Services solutions"
           },
           {
             id: 9302,
             title: "Azure",
             pageData: "",
-            href: "/technologies/azure",
+            href: "/technologies/cloud/azure",
             description: "Microsoft Azure cloud services"
           },
           {
             id: 9303,
             title: "Google Cloud",
             pageData: "",
-            href: "/technologies/google-cloud",
+            href: "/technologies/cloud/google-cloud",
             description: "Google Cloud Platform expertise"
           },
           {
             id: 9304,
             title: "Kubernetes",
             pageData: "",
-            href: "/technologies/kubernetes",
+            href: "/technologies/cloud/kubernetes",
             description: "Container orchestration at scale"
           },
           {
             id: 9305,
             title: "Docker",
             pageData: "",
-            href: "/technologies/docker",
+            href: "/technologies/cloud/docker",
             description: "Containerization for modern apps"
           },
           {
             id: 9306,
             title: "Serverless",
             pageData: "",
-            href: "/technologies/serverless",
+            href: "/technologies/cloud/serverless",
             description: "Event-driven cloud computing"
           }
         ]
@@ -790,47 +805,48 @@ export const menuData: MenuItemType[] = [
         pageData: "",
         description: "Storage, processing, and analysis solutions",
         image: "/images/menu/data-tech.jpg",
+        href: "/technologies/data",
         children: [
           {
             id: 9401,
             title: "PostgreSQL",
             pageData: "",
-            href: "/technologies/postgresql",
+            href: "/technologies/data/postgresql",
             description: "Advanced open-source database"
           },
           {
             id: 9402,
             title: "MongoDB",
             pageData: "",
-            href: "/technologies/mongodb",
+            href: "/technologies/data/mongodb",
             description: "NoSQL database for modern applications"
           },
           {
             id: 9403,
             title: "Redis",
             pageData: "",
-            href: "/technologies/redis",
+            href: "/technologies/data/redis",
             description: "In-memory data structure store"
           },
           {
             id: 9404,
             title: "Elasticsearch",
             pageData: "",
-            href: "/technologies/elasticsearch",
+            href: "/technologies/data/elasticsearch",
             description: "Distributed search and analytics"
           },
           {
             id: 9405,
             title: "Apache Kafka",
             pageData: "",
-            href: "/technologies/kafka",
+            href: "/technologies/data/kafka",
             description: "Real-time data streaming platform"
           },
           {
             id: 9406,
             title: "GraphQL",
             pageData: "",
-            href: "/technologies/graphql",
+            href: "/technologies/data/graphql",
             description: "API query language for modern apps"
           }
         ]
@@ -841,47 +857,48 @@ export const menuData: MenuItemType[] = [
         pageData: "",
         description: "Intelligent solutions for complex problems",
         image: "/images/menu/ai-ml.jpg",
+        href: "/technologies/ai-ml",
         children: [
           {
             id: 9501,
             title: "TensorFlow",
             pageData: "",
-            href: "/technologies/tensorflow",
+            href: "/technologies/ai-ml/tensorflow",
             description: "End-to-end machine learning platform"
           },
           {
             id: 9502,
             title: "PyTorch",
             pageData: "",
-            href: "/technologies/pytorch",
+            href: "/technologies/ai-ml/pytorch",
             description: "Research-focused deep learning"
           },
           {
             id: 9503,
             title: "Computer Vision",
             pageData: "",
-            href: "/technologies/computer-vision",
+            href: "/technologies/ai-ml/computer-vision",
             description: "Image and video processing"
           },
           {
             id: 9504,
             title: "NLP",
             pageData: "",
-            href: "/technologies/nlp",
+            href: "/technologies/ai-ml/nlp",
             description: "Natural language understanding"
           },
           {
             id: 9505,
             title: "Predictive Models",
             pageData: "",
-            href: "/technologies/predictive-models",
+            href: "/technologies/ai-ml/predictive-models",
             description: "Future-focused business intelligence"
           },
           {
             id: 9506,
             title: "GenAI & LLMs",
             pageData: "",
-            href: "/technologies/generative-ai",
+            href: "/technologies/ai-ml/generative-ai",
             description: "Creative AI applications"
           }
         ]
@@ -892,47 +909,48 @@ export const menuData: MenuItemType[] = [
         pageData: "",
         description: "Streamline development and operations",
         image: "/images/menu/devops.jpg",
+        href: "/technologies/devops",
         children: [
           {
             id: 9601,
             title: "CI/CD Pipelines",
             pageData: "",
-            href: "/technologies/cicd",
+            href: "/technologies/devops/cicd",
             description: "Automated testing and deployment"
           },
           {
             id: 9602,
             title: "Jenkins",
             pageData: "",
-            href: "/technologies/jenkins",
+            href: "/technologies/devops/jenkins",
             description: "Open-source automation server"
           },
           {
             id: 9603,
             title: "GitHub Actions",
             pageData: "",
-            href: "/technologies/github-actions",
+            href: "/technologies/devops/github-actions",
             description: "Workflow automation for GitHub"
           },
           {
             id: 9604,
             title: "Terraform",
             pageData: "",
-            href: "/technologies/terraform",
+            href: "/technologies/devops/terraform",
             description: "Infrastructure as code"
           },
           {
             id: 9605,
             title: "Ansible",
             pageData: "",
-            href: "/technologies/ansible",
+            href: "/technologies/devops/ansible",
             description: "Configuration management"
           },
           {
             id: 9606,
             title: "Monitoring Tools",
             pageData: "",
-            href: "/technologies/monitoring",
+            href: "/technologies/devops/monitoring",
             description: "System and application observability"
           }
         ]
