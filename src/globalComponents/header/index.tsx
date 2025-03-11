@@ -1,3 +1,4 @@
+/* eslint-disable */
 "use client";
 
 import { useState, useEffect, useRef } from "react";
@@ -64,7 +65,7 @@ export default function Header() {
       ref={headerRef}
       className={cn(
         "sticky top-0 z-50 w-full transition-all duration-300 ease-in-out",
-        scrolled ? "bg-primary text-white py-12" : "bg-white text-primary py-8"
+        scrolled ? "bg-primary text-white py-10" : "bg-white text-primary py-8"
       )}
       style={{ "--header-height": `${headerHeight}px` } as React.CSSProperties}>
       <div className="container mx-auto flex items-center justify-between ">

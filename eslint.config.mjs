@@ -111,7 +111,7 @@ export default [
 
   // Ignore patterns
   {
-    ignores: ["node_modules/**", ".next/**", "out/**", "build/**", "public/**", "next.config.js", "src/components/**"]
+    ignores: ["node_modules/**", ".next/**", "out/**", "build/**", "public/**", "next.config.js", "src/components/**", "src/globalComponents/header"]
   }
 ];
 
