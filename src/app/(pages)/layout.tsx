@@ -1,4 +1,4 @@
-import Header from "@/pagecomponents/homePageComponents/header";
+import Header from "@/globalComponents/header";
 import React from "react";
 
 export default function PageLayout({

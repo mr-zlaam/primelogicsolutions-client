@@ -31,7 +31,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps): JSX.Element {
         key={item.id}
         className={cn("w-full", depth > 0 ? "ml-4" : "")}>
         <div className="flex items-center justify-between">
-          {item.href !== undefined && item.href !== null ? (
+          {item.href!==undefined &&item.href==="/" && depth>1&&item!==null ? (
             <Link
               href={item.href}
               className="py-3 text-lg w-full text-gray-900"
